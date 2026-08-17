@@ -105,3 +105,14 @@ blocker `init.7` reported at 08:34 and could not resolve.
 `assets/pipeline.js:618-622` sets both from the JSON (`ctx.product || data.product`), and line 619
 explicitly handles the un-substituted `{{` placeholder. **The template defect stands** — `init.md`
 step 6 orders an edit checklist item 8 forbids — and is worth reporting upstream.
+
+## 2026-08-17 · gate
+
+**Decided:** "tag it" — phase-0 sign-off. `/dsf:check 0` returned 12 pass · 0 fail · 0 human
+against `.design/checklists/phase-0-init.md`, verdict written to
+`.design/checklists/results/phase-0.md`, and the human confirmed at the sign-off gate.
+**Contradicts:** `nothing`
+**Option:** n/a
+**Propagated:** tag `phase-0-init` created; `index.html` phase 0 → `status: done` + `tagged: true`
+with both artifact `exists` flags true, phase 1 → `in-progress`; phase 0 `criteria` written as all
+twelve passed, `checkedAt: 2026-08-17`. Phase 0 is closed; `/dsf:brief` is the next command.

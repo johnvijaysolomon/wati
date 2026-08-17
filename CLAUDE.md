@@ -7,6 +7,59 @@ Read this file first, then the artifacts it points to. Never re-ask what is alre
 
 ---
 
+## Brief
+
+Approved at the phase-1 gate, 2026-08-17, by interrogation not drafting (`superpowers`
+**brainstorming**). Verbatim trace: `.design/decisions.md`.
+
+**Wati** — an agentic customer engagement platform. The AI resolves the conversation; the
+product is where you build, watch and correct it.
+
+**Who.** The **Administrator** of a business already running a WhatsApp BSP — Wati, AiSensy,
+Interakt, Gupshup. They arrive mid-category, not new to it: templates, contacts and a connected
+number in hand, and they know what a template approval is. They own the workspace — users,
+roles, channels, numbers, billing, integrations. Ten roles exist (Administrator, Campaign
+Manager, Template Manager, Operator, Developer, Contact Manager, Dashboard Viewer, Automation
+Manager, Billing Manager, Trial); **Administrator and Operator get designed views**, the other
+eight are permission-gated. `Trial` is a role, so the trial state is designed, not an afterthought.
+
+**Problem.** The AI in the tool they have is fake — a keyword bot behind a flow builder. It
+deflects nothing real, so humans still answer everything and the cost curve never bends. It is
+the business's problem before the user's: with nothing built they pay per conversation *and* per
+head.
+
+**Platform.** **Desktop web, primary**; tablet and mobile adapt down. This **inverts phase 8** —
+phase 4 designs at desktop width and phase 8 contracts. Deliberate; do not "correct" it back.
+
+**Scope.** The Administrator's world, deep — set up the AI, watch it deflect, fix what it gets
+wrong, control who can do what. Inbox and campaigns are real but secondary. **Channels:**
+WhatsApp, web chat widget, Instagram + Facebook DM, email, SMS — all five, reached as
+**connect / configure / monitor / govern**, not five parallel inboxes. That reading is what keeps
+"all five" and "deep, not broad" from contradicting each other.
+
+**Constraints.** No deadline, team limit, or legal/regional fence stated. Greenfield brand: Wati
+is the name, the identity is designed fresh, the current Wati look constrains nothing. Inherited
+input, *not* a lock — phase 0 parks the brand green `#23A455` as a phase-5 starting point;
+`/dsf:concept` opens by asking whether it is a hard lock or a start. The repo is **public and
+world-readable**, accepted knowingly at this gate.
+
+**It works if.** (1) A migrating Administrator gets from signup to the AI answering live traffic
+in **under 10 minutes of in-product time** — knowledge loaded, guardrails set, AI live; Meta's
+own number-connection and template-approval wait (hours, external) is excluded and runs in
+parallel. (2) Cost per resolved conversation falls **30%** against the previous BSP's blended
+cost, measured post-migration.
+
+**It is not.** *Another WhatsApp API SaaS* (the human's line). Not a chatbot builder. Not
+shared-inbox-first.
+
+**Open `[?]`** — `[?]` the 30% measurement window: "post-migration" carries no period;
+hypothesis **90 days**, confirmed by the human or a phase-2 category benchmark. `[?]` which
+surfaces the eight non-designed roles reach — phase-3 work, confirmed by `ia/sitemap.md`. `[?]`
+what "the AI is fake" means concretely in the competitors: the human's diagnosis, not yet a
+sourced finding — confirmed by phase 2 collecting competitor AI capability first-hand (rule 3).
+
+---
+
 ## First contact
 
 If this looks like a fresh clone (toolbox rows still `[?]`, no `phase-0` ledger), your FIRST
@@ -127,7 +180,14 @@ phases need, plus paths. Not a retelling of the artifact.
 
 ### Brief
 <!-- phase 1 · what the product is, who it is for, platform, constraints, success criteria -->
-`[?]`
+Done, 2026-08-17 — full text in the **Brief** section at the top of this file; gate trace in
+`.design/decisions.md`. The five facts later phases need most: primary user is the
+**Administrator** switching off another WhatsApp BSP · the job is **AI-first deflection**, so
+the inbox is an exception surface, not the workspace · **desktop web is primary**, so phase 8
+contracts instead of expanding · **five channels** as connect/configure/monitor/govern, not five
+inboxes · success is **10 min of in-product time to live** and **−30% cost per resolved
+conversation**. Three `[?]` are open and listed in the Brief section; phase 2 should close the
+third one.
 
 ### Research
 <!-- phase 2 · chosen interaction pattern · the three MVP mechanics · benchmark dimension · top three open questions · paths to research/ -->

@@ -116,3 +116,41 @@ against `.design/checklists/phase-0-init.md`, verdict written to
 **Propagated:** tag `phase-0-init` created; `index.html` phase 0 → `status: done` + `tagged: true`
 with both artifact `exists` flags true, phase 1 → `in-progress`; phase 0 `criteria` written as all
 twelve passed, `checkedAt: 2026-08-17`. Phase 0 is closed; `/dsf:brief` is the next command.
+
+## 2026-08-17 · gate
+
+**Decided:** "approved" — the phase-1 brief gate, on the brief played back in chat. The
+answers it approves, in the human's words across the interrogation: `"an omnichannel app like
+intercom, ai sensy"` (seed) · AI-first deflection · Administrator, from a ten-role model they
+supplied · already on a WhatsApp BSP · "the AI is fake" · desktop web primary · greenfield,
+`"Wati is the name, fresh visual identity"` · all five channels · `"10 minutes"`, `"30%"`,
+`"against previous BSP-post migration"` · `"no"` hard constraints · `"this is not another
+WhatsApp API based SAAS app"` · designed roles `"Admin, operator"`.
+**Contradicts:** `nothing` — phase 1 authors the spec chain's first layer, so there was nothing
+upstream to contradict. Two prior phase-0 entries were read and carried forward rather than
+re-decided: the product name (`"Product is Wati - An agentic customer engagement platform"`)
+and the parked brand green `#23A455`, which stays a phase-5 starting point, not a lock.
+**Option:** n/a
+**Propagated:** `CLAUDE.md` (Brief section + Brief context block), `README.md` (Brief section),
+twelve scaffold folders, `index.html` (`context.product`, `context.oneLiner`, phase 1 artifacts,
+phase 2 unlocked, `steps`), `.design/progress/phase-1.md`.
+
+## 2026-08-17 · contradiction
+
+**Decided:** not a human gate — recorded because the rule-12 guard fired against the framework
+itself, not against a request. `/dsf:brief` step 6 orders every `{{PRODUCT_NAME}}` occurrence in
+`index.html` replaced, including `<title>` and `[data-product]`. `.design/memory/phases.md`
+(**The dashboard data block**) says the *only* part of that file any command may touch is the
+`pipeline-data` block, and phase-0 checklist item 8 — signed off 12/12 — forbids the markup edit.
+The same collision blocked `/dsf:init` at 08:34 and was resolved there by restoring the markup.
+**Contradicts:** `.design/memory/phases.md` line 225, quoted: "the **only** part any command may
+touch is the data block embedded in `index.html` itself". `CLAUDE.md` binds the tie: "When a
+command and that file disagree, that file wins."
+**Option:** (1) update the spec — the command file is what is wrong, and it is wrong in a way
+that is now recorded twice. Verified rather than assumed: `assets/pipeline.js:618` reads
+`ctx.product || data.product` and writes it into `document.title` and every `[data-product]`
+node, so filling `context.product` renders the name everywhere and the markup substitution is
+redundant as well as forbidden.
+**Propagated:** `index.html` `context.product` set to `Wati`; the two `{{PRODUCT_NAME}}`
+placeholders in the markup left intact by design. Reported at sign-off as a framework bug in
+`/dsf:brief` step 6, not as a phase-1 defect.

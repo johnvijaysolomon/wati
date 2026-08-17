@@ -1,69 +1,124 @@
 # Wati
 
-An agentic customer engagement platform.
+An agentic customer engagement platform. The AI resolves the conversation; the product is where
+you build, watch and correct it — designed around the Administrator switching off a WhatsApp BSP
+whose "AI" never deflected anything.
 
-This repo **is** the design file. The brief, research, structure, screens, voice, visual
-language, design system and handoff all live here as versioned artifacts — not in a Figma file
-and not in chat history. It is built with the
-[design-spec-framework](https://github.com/denysosadchyi/design-spec-framework) pipeline,
-driven by `/dsf:*` commands in Claude Code.
+This repo **is** the design file. Research, structure, screens, copy, visual language, the
+design system and the handoff all live here as files. No Figma required.
 
-> Phase 0 wrote this skeleton. `/dsf:brief` (phase 1) replaces the one-liner above with the
-> interrogated brief and fills the section links below as each phase produces them.
+**→ [Open the pipeline page](./index.html)** — this is your home: current phase, every
+step and prompt to type, success criteria, and links to every viewable page. Live at
+**<https://johnvijaysolomon.github.io/wati/>**.
 
-## Start here
+**Current phase: 2 · Discover.** Phase 1 is written and awaiting `/dsf:check`; the next
+prompt to type is `/dsf:research`.
 
-**Project home page: <https://johnvijaysolomon.github.io/wati/>** — published from `main` by
-GitHub Pages. It also opens straight from the local file, [`index.html`](index.html)
-(`/Users/johnvijaysolomon/wati/index.html`), with no server needed.
-
-It is the state view of the pipeline: which phase the project is in, every artifact produced so
-far, the criteria each phase is verified against, and the prompt to send next. Status is derived
-from the files on disk, the `/dsf:check` verdicts and the git tags — never declared.
-
-> **This repo is public.** Pages on a private repo needs a paid GitHub plan, so the repo was made
-> public at the phase-0 gate to publish the pipeline. Everything committed here — research,
-> screenshots, personas, quotes — is world-readable. Anything that must stay private does not
-> belong in this repo.
-
-## The route
-
-One line per section, filled in by the phase that produces it. `[?]` means "that phase has not
-run yet" — it is a real state, not a gap to tidy.
-
-| Section | What is in it | Status |
-|---|---|---|
-| Brief | What Wati is, who it is for, constraints, success criteria — `CLAUDE.md` | `[?]` |
-| Research | Competitor matrix, benchmark, chosen pattern — `research/` | `[?]` |
-| People | Personas and jobs-to-be-done — `people/` | `[?]` |
-| Structure | Sitemap and flows — `ia/` | `[?]` |
-| Wireframes | Every screen in every state — `wireframes/index.html` | `[?]` |
-| Voice | Voice principles and the single copy source — `voice/` | `[?]` |
-| Concept | Recorded taste, references, the chosen direction — `concept/` | `[?]` |
-| Build | Tokens, components, the kit — `DESIGN.md`, `design-system/`, `ui/` | `[?]` |
-| System | The design system showcase and patterns — `design-system/docs/` | `[?]` |
-| Responsive | Breakpoints, grid, the adaptive shell — `responsive/` | `[?]` |
-| Motion | Motion tokens and the inventory — `animations/` | `[?]` |
-| Handoff | Behaviour spec, token map, a11y — `handoff/` | `[?]` |
-
-## How the repo governs itself
-
-- [`CLAUDE.md`](CLAUDE.md) — the agent's context: the brief, the toolbox, and one block per phase.
-- [`.design/memory/constitution.md`](.design/memory/constitution.md) — the binding rules every
-  `/dsf:*` command obeys.
-- [`.design/memory/phases.md`](.design/memory/phases.md) — the canonical phase table.
-- [`.design/memory/toolbox.md`](.design/memory/toolbox.md) — which tools this project has and
-  what each fallback means downstream.
-- [`.design/decisions.md`](.design/decisions.md) — append-only: every gate answer, verbatim.
-- [`.design/progress/`](.design/progress/) — append-only step ledgers, one file per phase.
-- [`.design/checklists/`](.design/checklists/) — the done-criteria `/dsf:check` verifies against.
-- [`docs/FRAMEWORK.md`](docs/FRAMEWORK.md) — how the framework itself works.
-
-## Next
-
-`/dsf:brief` — the phase-1 interrogation that turns the one-liner above into a real brief.
-`/dsf:status` at any time tells you where the project is and what to send next.
+Built with [design-spec-framework](https://github.com/denysosadchyi/design-spec-framework) —
+spec-driven development for product design. Work is driven by `/dsf:*` commands in Claude
+Code; the rules live in `.design/memory/constitution.md`.
 
 ---
 
-Built on [design-spec-framework](https://github.com/denysosadchyi/design-spec-framework) (MIT).
+## Brief
+
+<!-- phase 1 -->
+
+**Wati** is an agentic customer engagement platform. The AI handles the conversation end to end;
+humans are the exception path, and the product's job is to make that AI good.
+
+It is built for the **Administrator** of a business already running a WhatsApp BSP — Wati,
+AiSensy, Interakt, Gupshup. They arrive mid-category with templates, contacts and a connected
+number already in hand. They switch because the AI they have is fake: a keyword bot behind a
+flow builder that deflects nothing, so humans still answer everything and the cost curve never
+bends.
+
+Ten roles exist in the product; **Administrator and Operator get designed views** and the other
+eight are permission-gated. Five channels are in scope — WhatsApp, web chat, Instagram and
+Facebook DM, email, SMS — reached through the Administrator's lens: connect, configure, monitor,
+govern. Not five parallel inboxes.
+
+**Platform:** desktop web, primary — tablet and mobile adapt down. This inverts phase 8, and
+that inversion is deliberate.
+
+**It works if:** a migrating Administrator gets from signup to the AI answering live traffic in
+**under 10 minutes of in-product time** (Meta's own approval wait excluded), and cost per
+resolved conversation falls **30%** against their previous BSP.
+
+**It is not:** another WhatsApp API SaaS. Not a chatbot builder. Not shared-inbox-first.
+
+Open questions carried into phase 2 are marked `[?]` in `CLAUDE.md` → **Brief**.
+
+## Research
+
+<!-- phase 2 · competitors, benchmark, patterns -->
+`[?]` → `research/research.html`
+
+## People
+
+<!-- phase 2 · personas and jobs -->
+`[?]` → `people/personas.html`
+
+## Structure
+
+<!-- phase 3 · sitemap, navigation, flows -->
+`[?]` → `ia/ia.html`
+
+## Wireframes
+
+<!-- phase 4 · grey screens with all states -->
+`[?]` → `wireframes/index.html`
+
+## Voice
+
+<!-- phase 5 · voice principles and the copy source of truth -->
+`[?]` → `voice/voice.html`, `voice/microcopy.md`
+
+## Concept
+
+<!-- phase 5 · chosen visual direction -->
+`[?]` → `concept/directions.html`, `concept/concept.html`
+
+## UI
+
+<!-- phase 6 · token audit, tokens, components, kit showcase -->
+`[?]` → `ui/kit.html`, `ui/tokens-audit.md`
+
+## Design system
+
+<!-- phase 7 · the system as a product, with live docs -->
+`[?]` → `design-system/docs/index.html`
+
+## Responsive
+
+<!-- phase 8 · behavior-based breakpoints, adaptive shell and components, split-view -->
+`[?]` → `responsive/width-audit.html`
+
+## Motion
+
+<!-- phase 9 · motion tokens, the three jobs, reduced-motion -->
+`[?]` → `animations/motion-inventory.html`
+
+## Handoff
+
+<!-- phase 10 · spec, map, a11y, release -->
+`[?]` → `handoff/index.html`
+
+---
+
+## Repo map
+
+| Path | What lives there |
+|---|---|
+| `.design/` | Constitution, phase table, toolbox, fallback prompts, artifact templates, phase checklists, `checklists/results/` (the `/dsf:check` verdicts), `progress/` (the append-only step ledgers), decision log |
+| `.claude/commands/dsf/` | The `/dsf:*` commands |
+| `CLAUDE.md` | Agent context — brief plus a block per phase |
+| `index.html` | The project's home page — phases, artifacts, links, status |
+| `research/` · `people/` | Phase 2 |
+| `ia/` | Phase 3 |
+| `wireframes/` | Phase 4 — the screens, layered by every later phase |
+| `voice/` · `concept/` | Phase 5 |
+| `ui/` · `design-system/` · `visuals/` | Phases 6–7 |
+| `responsive/` | Phase 8 |
+| `animations/` | Phase 9 |
+| `handoff/` | Phase 10 |

@@ -267,3 +267,26 @@ brief does not mention, so it enters the spec here for the first time.
 **Option:** n/a
 **Propagated:** `people/jtbd.md` (MVP core + cut candidates), `CLAUDE.md` People block, and
 `/dsf:ia` (phase 3), which turns these three jobs into the sitemap.
+
+## 2026-08-17 · gate
+
+**Decided:** "phase-2-discover" — the phase-2 sign-off gate, on a 25/25 verdict covering both
+sub-commands (`/dsf:research` and `/dsf:users`, 19/19 steps). The human named the tag, which is
+the confirmation the checklist alone could not give.
+**Contradicts:** `nothing` in this pass — but the phase is signed off **carrying an open
+contradiction against phase 1**, and that is recorded rather than resolved here: the brief's
+problem statement ("the AI in the tool they have is fake — a keyword bot behind a flow builder")
+has been contradicted twice by phase-2 evidence. 2a: the incumbents' AI exists and is an *upsell*
+on a keyword-flow core. 2b Q3: a search specifically for people who left over bad AI answers found
+none — the corpus records absent support, billing traps and platforms that did not work.
+`CLAUDE.md` and `README.md` still carry the original wording, deliberately unpatched, because
+editing a signed-off artifact from inside a later phase is exactly what constitution rule 13
+forbids.
+**Option:** n/a for this gate. The contradiction above is routed to `/dsf:change`, which sizes the
+blast radius and decides whether phase 1 reopens.
+**Propagated:** `.design/checklists/results/phase-2.md` (25/25 verdict), `index.html`
+(phase 2 `criteria` 25/25, `status: done`, `tagged: true`; phase 3 `locked` → `in-progress`),
+git tag `phase-2-discover`. Four further items are carried forward in the verdict's
+*Carried forward* section: two dangerous `[?]` holding scope decisions, email and SMS unevidenced
+as inbound channels, and Meta's 2026-01-15 AI-Provider policy as a constraint the brief records as
+absent.

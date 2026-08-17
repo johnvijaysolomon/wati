@@ -172,3 +172,52 @@ inversion warning.
 `phase-1-brief`. Carried forward, not closed: checklist item 12 passes but rests on the human's
 own diagnosis that the incumbents' AI is a keyword bot — if `/dsf:research` finds otherwise, the
 brief's problem statement moves and phase 1 reopens through `/dsf:change`.
+
+## 2026-08-17 · gate
+
+**Decided:** "remove Wati, cut soft group to Intercom, Tidio, Zendesk" — the phase-2a competitor-set
+gate. Wati's current product was proposed as a hard comparator and struck, so the research argues
+against the market rather than against the incumbent being replaced. The soft group was cut from
+five to three, taking the trade the proposal offered explicitly: fewer products, deeper evidence
+per product. Crisp and Freshworks (Freddy) were the two dropped. Final set: 12 products — hard 4
+(AiSensy, Interakt, Gupshup, Respond.io), soft 3 (Intercom, Tidio, Zendesk), aspirational 5
+(Sierra, Decagon, Ada, Salesforce Agentforce, Forethought).
+**Contradicts:** `nothing`
+**Option:** n/a
+**Propagated:** `.design/progress/phase-2.md`, and the collection scope of `research.2` — no
+product outside this list is searched, per the command's own rule.
+
+## 2026-08-17 · gate
+
+**Decided:** "confirmed" — the phase-2a benchmark-dimension gate. The dimension is **proving the
+AI works**: how a product defines a resolution, measures it, shows the Administrator what the AI
+got wrong, and turns that into a fix. Proposed from the matrix, where six products claim 67–98%
+resolution and only Intercom publishes what counts (confirmed vs assumed resolution, no charge
+when the customer asks for a human, refund on reopen). The alternative offered and not taken was
+time-to-live, which competes with the 10-minute success criterion; it was argued against because
+it is a one-time event while proving-it-works is the loop the Administrator returns to weekly.
+**Contradicts:** `nothing`
+**Option:** n/a
+**Propagated:** `research/research.md` BENCHMARK section, `index.html` `context.benchmarkDimension`,
+`.design/progress/phase-2.md`. Phase 5 reads this dimension back when deriving the visual language.
+
+## 2026-08-17 · gate
+
+**Decided:** "2" — the phase-2a pattern gate. Chosen pattern: **clustered themes**, where failures
+are grouped by cause and the unit of work is the theme, never the individual conversation. Chosen
+against four alternatives that differ in mechanism: queue triage (item by item), sampled audit
+(statistical), counterfactual replay (test against history), natural-language authoring.
+**Reading recorded because the answer is terse:** the recommendation it selects was stated as
+"2 · Clustered themes, with 4 · Counterfactual replay as the action taken from a cluster", so the
+pairing is carried forward. If "2" meant clusters without replay, that is a correction to make
+before `/dsf:ia` — replay is a large build commitment and it shapes the main screen.
+**Rejected and why, so it is not re-litigated:** queue triage was disqualified — it contradicts the
+brief's own line that the inbox is "an exception surface, not the workspace", it gives the
+Administrator the Operator's job, and it fails benchmark criterion C5 (you can close items forever
+without the system improving). Sampled audit is the named second choice, under the condition that
+real accounts produce so many themes that the job becomes proving the number rather than fixing
+the tail.
+**Contradicts:** `nothing`
+**Option:** n/a
+**Propagated:** `research/research.md` PATTERNS + CONCLUSIONS, `CLAUDE.md` Research context block,
+`.design/progress/phase-2.md`. `/dsf:ia` (phase 3) derives the sitemap from this pattern.

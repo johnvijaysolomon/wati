@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wati · Research</title>
+<style>
+  :root{
+    --bg:#0d0f12; --panel:#14171c; --panel-2:#191d23; --line:#242a32;
+    --ink:#e6e9ee; --ink-2:#a8b1bd; --ink-3:#6f7883;
+    --accent:#23a455; --warn:#c9a227; --bad:#c2554a;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:60rem;margin:0 auto;padding:4rem 1.5rem 6rem}
+  header{border-bottom:1px solid var(--line);padding-bottom:2rem;margin-bottom:3rem}
+  .eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
+           color:var(--ink-3);margin:0 0 .75rem}
+  h1{font-size:2.25rem;line-height:1.15;margin:0 0 .75rem;letter-spacing:-.02em}
+  .lede{color:var(--ink-2);margin:0;max-width:46rem}
+  h2{font-size:.8rem;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;
+     color:var(--accent);margin:4rem 0 1.25rem;padding-top:2rem;border-top:1px solid var(--line)}
+  h3{font-size:1.15rem;margin:2.5rem 0 .75rem;letter-spacing:-.01em}
+  h4{font-size:.95rem;margin:2rem 0 .5rem;color:var(--ink-2)}
+  p{margin:0 0 1rem;max-width:46rem}
+  ul,ol{max-width:46rem;padding-left:1.25rem}
+  li{margin-bottom:.6rem}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(35,164,85,.35)}
+  a:hover{border-bottom-color:var(--accent)}
+  code{font-family:var(--mono);font-size:.85em;background:var(--panel-2);
+       border:1px solid var(--line);border-radius:3px;padding:.1em .35em}
+  .scroll{overflow-x:auto;margin:1.25rem 0;border:1px solid var(--line);border-radius:6px;
+          background:var(--panel)}
+  table{border-collapse:collapse;width:100%;font-size:.875rem;min-width:40rem}
+  th,td{text-align:left;padding:.7rem .85rem;border-bottom:1px solid var(--line);
+        vertical-align:top}
+  th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
+     color:var(--ink-3);background:var(--panel-2);white-space:nowrap;position:sticky;top:0}
+  tbody tr:last-child td{border-bottom:none}
+  td strong{color:var(--ink)}
+  .num{text-align:center;font-family:var(--mono);white-space:nowrap}
+  .tot{font-family:var(--mono);font-weight:600;white-space:nowrap}
+  .q{font-family:var(--mono);color:var(--warn);font-size:.85em;
+     background:rgba(201,162,39,.09);border:1px solid rgba(201,162,39,.28);
+     border-radius:3px;padding:.1em .35em;white-space:nowrap}
+  .restricted{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--bad);border:1px solid rgba(194,85,74,.4);border-radius:3px;padding:.15em .45em}
+  figure{margin:2rem 0;border:1px solid var(--line);border-radius:6px;overflow:hidden;
+         background:var(--panel)}
+  figure img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+  figcaption{padding:.85rem 1rem;font-size:.82rem;color:var(--ink-2)}
+  figcaption b{color:var(--ink)}
+  .note{border-left:2px solid var(--accent);background:var(--panel);
+        padding:1rem 1.25rem;margin:1.5rem 0;max-width:46rem;border-radius:0 6px 6px 0}
+  .note.warn{border-left-color:var(--warn)}
+  .note p:last-child{margin-bottom:0}
+  .meta{font-family:var(--mono);font-size:.78rem;color:var(--ink-3)}
+  .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin:1.5rem 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1rem 1.15rem}
+  .card h5{margin:0 0 .4rem;font-size:.8rem;font-family:var(--mono);letter-spacing:.08em;
+           text-transform:uppercase;color:var(--ink-3)}
+  .card p{margin:0;font-size:.9rem}
+  footer{margin-top:5rem;padding-top:2rem;border-top:1px solid var(--line);
+         font-size:.82rem;color:var(--ink-3)}
+  @media (max-width:40rem){ .wrap{padding:2.5rem 1rem 4rem} h1{font-size:1.7rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Wati · Phase 2a · Discover</p>
+  <h1>Research</h1>
+  <p class="lede">Twelve competitors in three groups, one benchmark dimension studied across
+  categories, five interaction patterns and the one chosen. Every claim carries a link or a
+  screenshot; anything unverified stays marked <span class="q">[?]</span> rather than being
+  smoothed into a confident sentence.</p>
+  <p class="meta" style="margin-top:1.25rem">Collected 2026-08-17 · sources: product and pricing
+  pages, vendor documentation, six screenshots in <code>research/screens/</code> ·
+  agent-readable source of truth: <code>research/research.md</code></p>
+</header>
+
+<div class="note warn">
+  <p><b>What could not be reached.</b> Every in-product Administrator surface in this market sits
+  behind a login this project does not have, so all captures are public marketing or pricing
+  pages. Salesforce Agentforce returned HTTP&nbsp;403 on both its product and pricing pages and is
+  carried as <span class="q">[?] unverified</span> rather than filled from memory. Gupshup
+  publishes no pricing. Those gaps are visible in the tables below, not hidden.</p>
+</div>
+
+<!-- ============ COMPETITORS ============ -->
+<h2>Competitors</h2>
+
+<p>Set approved at the competitor gate: <em>"remove Wati, cut soft group to Intercom, Tidio,
+Zendesk."</em> Wati's own current product was proposed as a hard comparator and struck, so this
+research argues against the market rather than against the incumbent being replaced.</p>
+
+<h3>The matrix</h3>
+<div class="scroll">
+<table>
+<thead><tr><th>Product</th><th>Audience</th><th>Product core</th><th>Key mechanic</th><th>Trust</th><th>Monetization</th></tr></thead>
+<tbody>
+<tr><td><strong>AiSensy</strong><br><span class="meta">hard</span></td><td>Indian SMB / D2C on WhatsApp</td><td>WhatsApp campaigns + bots</td><td><strong>Drag &amp; drop flow builder</strong>; "AI Agent Builder" is a <em>separate product</em></td><td>Meta BSP status; template approval</td><td>₹2,500/mo builder · <strong>₹3,500/mo AI Agent Builder</strong> · +per-message</td></tr>
+<tr><td><strong>Interakt</strong><br><span class="meta">hard</span></td><td>Indian SMB, Shopify-heavy</td><td>WhatsApp commerce + support</td><td><code>Basic [Linear Chatbot]</code> / <code>Advanced [Branching, Logical Flows]</code></td><td>Meta BSP status</td><td>₹2,799–3,799/mo · <strong>AI Agents ₹3,000/mo add-on</strong> · ₹0.50/msg after 100</td></tr>
+<tr><td><strong>Gupshup</strong><br><span class="meta">hard</span></td><td>Mid-market / enterprise, emerging markets</td><td>CPaaS + agent platform</td><td>"Autonomous AI Agents", proprietary "ACE LLM model"</td><td>Enterprise scale, named bank logos</td><td><span class="q">[?] unverified</span> — no pricing published</td></tr>
+<tr><td><strong>Respond.io</strong><br><span class="meta">hard</span></td><td>Mid-market omnichannel</td><td>Omnichannel inbox + workflows</td><td>Workflows + AI Agents, metered in <strong>AI Credits</strong></td><td>SSO; explicit per-tier user counts</td><td>$79 / $159 / $279 · 5–10 users · AI <strong>included</strong> Growth+</td></tr>
+<tr><td><strong>Intercom</strong><br><span class="meta">soft</span></td><td>Product-led SaaS support</td><td>AI-first support platform</td><td>Fin answers from knowledge; <strong>outcome contractually defined</strong></td><td><strong>Published definition + refund on reopen</strong></td><td>$29–132/seat · <strong>$0.99 per outcome</strong></td></tr>
+<tr><td><strong>Tidio</strong><br><span class="meta">soft</span></td><td>SMB ecommerce</td><td>Live chat + Lyro AI</td><td>Lyro conversations, quota-metered</td><td><strong>"Guaranteed 50% resolution rate"</strong> — the only floor found</td><td>$24.17 → $300/mo · Lyro quotas from $32.50</td></tr>
+<tr><td><strong>Zendesk</strong><br><span class="meta">soft</span></td><td>Enterprise service teams</td><td>Ticketing + AI agents</td><td>Automated resolution over a ticket model</td><td>Enterprise compliance posture</td><td>$19–115/agent · <strong>per automated resolution</strong></td></tr>
+<tr><td><strong>Sierra</strong><br><span class="meta">aspirational</span></td><td>Enterprise CX</td><td>AI agent platform</td><td><strong>Ghostwriter</strong> authoring; "built-in guardrails"</td><td>"Monitors" flag problematic interactions</td><td>"Outcome-based pricing"; no rate card</td></tr>
+<tr><td><strong>Decagon</strong><br><span class="meta">aspirational</span></td><td>Enterprise CX</td><td>AI concierge</td><td><strong>Natural-language "Agent Operating Procedures"</strong></td><td><strong>"Watchtower — Always on QA"</strong>; simulations at scale</td><td><span class="q">[?] unverified</span></td></tr>
+<tr><td><strong>Ada</strong><br><span class="meta">aspirational</span></td><td>Enterprise CX</td><td>AI agent platform</td><td><strong>Playbooks</strong> + <strong>Coaching</strong> feedback loop</td><td><strong>Simulations</strong> — "test changes safely before they go live"</td><td><span class="q">[?] unverified</span></td></tr>
+<tr><td><strong>Forethought</strong><br><span class="meta">aspirational</span></td><td>Mid / enterprise support</td><td>AI agents over a helpdesk</td><td><strong>Discover Agent</strong> — "detect knowledge gaps"</td><td><span class="q">[?] unverified</span></td><td><span class="q">[?] unverified</span></td></tr>
+<tr><td><strong>Agentforce</strong><br><span class="meta">aspirational</span></td><td>Enterprise</td><td>Agent platform</td><td colspan="3"><span class="restricted">access restricted</span> — HTTP 403 on both product and pricing pages. Not filled from memory.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>The evidence</h3>
+
+<figure>
+  <img src="screens/aisensy-pricing-two-skus.png" alt="AiSensy pricing page showing a Drag and Drop Chatbot Builder plan alongside a separately priced WhatsApp AI Agent Builder plan">
+  <figcaption><b>AiSensy — two SKUs, one product.</b> The "Drag &amp; Drop WhatsApp Chatbot
+  Builder" at ₹2,500/mo sits beside a separate "WhatsApp AI Agent Builder" at ₹3,500/mo. The
+  buyer's paid default is a flow builder; the AI is the upsell.
+  <a href="https://aisensy.com/pricing">Source</a></figcaption>
+</figure>
+
+<figure>
+  <img src="screens/interakt-pricing-ai-addon.png" alt="Interakt pricing page listing Basic Linear Chatbot and Advanced Branching flows in core plans, with WhatsApp AI Agents sold as a monthly add-on">
+  <figcaption><b>Interakt — the same shape, stated plainly.</b> Core plans list
+  <code>Basic [Linear Chatbot]</code> and <code>Advanced [Branching, Logical Flows, API calls]</code>.
+  AI Agents are a ₹3,000/mo add-on with 100 free messages, then ₹0.50 each.
+  <a href="https://www.interakt.shop/pricing/">Source</a></figcaption>
+</figure>
+
+<figure>
+  <img src="screens/intercom-pricing-fin-outcome.png" alt="Intercom pricing page showing Fin AI Agent included in every plan and priced at 99 cents per outcome">
+  <figcaption><b>Intercom — AI in the base plan, billed per outcome.</b> Fin ships in all three
+  tiers and costs $0.99 per outcome. Because Intercom bills on the number, it is the only product
+  in this set that publishes what the number means.
+  <a href="https://www.intercom.com/pricing">Source</a></figcaption>
+</figure>
+
+<figure>
+  <img src="screens/decagon-aop-watchtower.png" alt="Decagon home page describing Agent Operating Procedures, Watchtower always-on QA and simulations at scale">
+  <figcaption><b>Decagon — the improvement loop has names.</b> "Agent Operating Procedures" in
+  natural language, "Watchtower — Always on QA", "Testing &amp; QA — Simulations at scale". The
+  hard group has no vocabulary for any of this.
+  <a href="https://decagon.ai/">Source</a></figcaption>
+</figure>
+
+<figure>
+  <img src="screens/ada-coaching-simulations.png" alt="Ada platform page describing Playbooks, Coaching as a feedback loop, and simulations to test changes before they go live">
+  <figcaption><b>Ada — coaching as a first-class surface.</b> "Coaching on past conversations…
+  are automatically applied to future interactions", plus simulations to "test changes safely
+  before they go live". <a href="https://www.ada.cx/platform/">Source</a></figcaption>
+</figure>
+
+<figure>
+  <img src="screens/respondio-pricing-ai-credits.png" alt="Respond.io pricing page showing four tiers with AI credits included from the Growth plan upward">
+  <figcaption><b>Respond.io — AI included, metered as credits.</b> The closest structural match
+  in the hard group, and the only one there that does not sell AI as a separate SKU.
+  <a href="https://respond.io/pricing">Source</a></figcaption>
+</figure>
+
+<h3>Three shared market patterns</h3>
+<ol>
+  <li><strong>The billable unit moved from the seat to the resolution.</strong> Intercom
+  <em>"$0.99 per outcome"</em>; Zendesk <em>"you pay only for customer requests that were
+  successfully resolved by the AI agent"</em>; Sierra <em>"outcome-based pricing"</em>. Seats
+  still exist but are no longer where value is counted.</li>
+  <li><strong>Everyone publishes a rate; almost nobody publishes a method.</strong> Claims run
+  67% (Tidio) · 70–80% (Decagon customers) · 80%+ (Zendesk) · 84% (Ada) · up to 98%
+  (Forethought). <b>Intercom alone defines what counts</b> — because it bills on it.</li>
+  <li><strong>The improvement loop is named in the aspirational group and nameless in the hard
+  group.</strong> Coaching, Watchtower, Monitors, Simulations, Discover Agent — against a flow
+  builder and no vocabulary at all for "the AI got it wrong, now what".</li>
+</ol>
+
+<h3>Three real differences</h3>
+<ol>
+  <li><strong>In the BSP group the AI is a second SKU bolted onto a flow-builder core.</strong>
+  AiSensy ₹2,500 → ₹3,500; Interakt a ₹3,000/mo add-on. Intercom, Zendesk and Respond.io include
+  it. <b>This resolves the brief's load-bearing question, with a correction:</b> the incumbents
+  <em>do</em> have AI agents in 2026. What is fake is that AI is an upsell on a keyword-flow
+  product, so the default the buyer already paid for is still a decision tree.</li>
+  <li><strong>Only one product sells a floor rather than a ceiling.</strong> Tidio's
+  <em>"Guaranteed 50% Lyro AI resolution rate"</em> against "up to" everywhere else.</li>
+  <li><strong>Only the aspirational group lets you test before customers do.</strong> Ada's
+  simulations, Decagon's simulations at scale, Sierra's Ghostwriter testing. Nothing in the hard
+  group offers it.</li>
+</ol>
+
+<h3>Three questions only the product owner can answer</h3>
+<div class="grid">
+  <div class="card"><h5>Baseline</h5><p>What is the current blended cost per resolved
+  conversation? The −30% criterion has no baseline without it, and no public source supplies
+  one.</p></div>
+  <div class="card"><h5>Pricing shape</h5><p>Will Wati price by outcome? If yes the
+  Administrator must be able to see what was billed, why, and contest it — a surface no hard-group
+  competitor has.</p></div>
+  <div class="card"><h5>Role reality</h5><p>How many real accounts use more than Administrator +
+  Operator? Ten roles were named at the brief gate; research cannot say which are
+  load-bearing.</p></div>
+</div>
+
+<!-- ============ BENCHMARK ============ -->
+<h2>Benchmark</h2>
+
+<h3>Dimension: proving the AI works</h3>
+<p>How a product defines a resolution, measures it, shows the Administrator what the AI got
+wrong, and turns that into a fix. Confirmed at the benchmark gate; <em>time-to-live</em> was
+offered as the alternative and declined.</p>
+
+<div class="note">
+  <p><b>Why this dimension.</b> Six products claim 67–98% resolution and exactly one publishes the
+  method. Intercom counts a <b>confirmed</b> resolution (the customer says it helped) or an
+  <b>assumed</b> one (24 hours of disengagement), does not charge when the customer asks for a
+  human or a Procedure fails, and <b>refunds the resolution if the conversation is reopened</b>.
+  Against that published definition, independent analysis puts Fin's production rate at
+  <b>45–53%</b> <span class="q">[?]</span> vendor-adjacent source, directional only. The gap
+  between the claimed number and the real one <em>is</em> the design problem — and both of this
+  product's success criteria are measurement claims that live inside it.</p>
+</div>
+
+<h4>Criteria — each written so two people would score it the same</h4>
+<div class="scroll">
+<table>
+<thead><tr><th>#</th><th>Criterion</th><th>A 1 looks like</th><th>A 5 looks like</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td>Success defined publicly and exactly</td><td>No success metric named</td><td>Calculation stated, including what does not count and what is reversed</td></tr>
+<tr><td class="num">2</td><td>Individual failures enumerable</td><td>Aggregate charts only</td><td>Every failure listed and openable; any cap disclosed</td></tr>
+<tr><td class="num">3</td><td>Cause visible at the failure</td><td>No reason given</td><td>Full reason or trace inline on the item</td></tr>
+<tr><td class="num">4</td><td>Testable before it affects anyone</td><td>No preview of any kind</td><td>Replayed against real history with the predicted impact diffed</td></tr>
+<tr><td class="num">5</td><td>Fix authored where the failure is seen</td><td>Read-only; fixing happens elsewhere</td><td>Fix created in place and linked to the failure</td></tr>
+<tr><td class="num">6</td><td>Regression detected automatically</td><td>Nothing notices a fixed thing breaking again</td><td>Item changes state on its own and the system notifies</td></tr>
+<tr><td class="num">7</td><td>The system verifies the fix</td><td>No verification; you assume</td><td>Explicit validate flow with named states and a verdict</td></tr>
+<tr><td class="num">8</td><td>Change history attributable</td><td>No record of who changed what</td><td>Who / what / when with before-and-after, marked on the chart</td></tr>
+</tbody>
+</table>
+</div>
+
+<h4>Scoring — five products, all from outside customer service</h4>
+<p><span class="q">[?]</span> is <em>unsourced</em>, not zero: excluded from numerator and
+denominator alike, so each product reports as score / scoreable. Ranks with fewer than eight
+scored criteria are provisional.</p>
+<div class="scroll">
+<table>
+<thead><tr><th>Product</th><th>Category</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>Total</th></tr></thead>
+<tbody>
+<tr><td><strong>LangSmith</strong></td><td>LLM app evaluation</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num">5</td><td class="num">3</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="tot">34/40</td></tr>
+<tr><td><strong>Stripe Radar</strong></td><td>Payments fraud ML</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num">2</td><td class="num">3</td><td class="num">5</td><td class="tot">31/40</td></tr>
+<tr><td><strong>Sentry</strong></td><td>Error monitoring</td><td class="num">2</td><td class="num">5</td><td class="num"><span class="q">?</span></td><td class="num">1</td><td class="num">2</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="tot">23/35</td></tr>
+<tr><td><strong>Search Console</strong></td><td>Search indexing</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">1</td><td class="num">1</td><td class="num">3</td><td class="num">5</td><td class="num">1</td><td class="tot">23/40</td></tr>
+<tr><td><strong>Datadog SLOs</strong></td><td>Observability</td><td class="num">5</td><td class="num">2</td><td class="num"><span class="q">?</span></td><td class="num"><span class="q">?</span></td><td class="num"><span class="q">?</span></td><td class="num">5</td><td class="num">3</td><td class="num"><span class="q">?</span></td><td class="tot">15/20</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note">
+  <p><b>The result that matters.</b> The two highest scorers are both "evaluate an automated
+  decision-maker" products — one for LLM apps, one for fraud ML. Neither is a support tool. That
+  is the strongest available evidence that this dimension is unsolved inside this category.</p>
+</div>
+
+<h4>Three mechanics for the MVP</h4>
+<ol>
+  <li><strong>Backtest before enable</strong> — from Stripe Radar and LangSmith. Radar
+  <em>"runs a simulation on the last 6 months of charges to determine how many legitimate,
+  fraudulent and blocked payments would have been affected by the rule, had it been
+  implemented"</em>. <b>Applied:</b> before an Administrator changes a guardrail, knowledge item
+  or handover rule, replay it against the last N real conversations and show which answers would
+  have changed.</li>
+  <li><strong>Validate-fix with named states</strong> — from Google Search Console, whose
+  <code>Validate fix</code> runs <code>Not started → Started → Looking good → Passed / Failed</code>.
+  <b>Applied:</b> when the Administrator fixes a theme, the product watches subsequent real
+  conversations and returns a verdict, instead of leaving the loop open the way the hard group
+  does.</li>
+  <li><strong>Automatic regression</strong> — from Sentry and Datadog. <em>"If the same issue
+  comes back in a newer release than the one you resolved it in, its status will automatically
+  change to 'Regressed'."</em> <b>Applied:</b> a theme the AI used to handle starts failing again
+  → it changes state and says so.</li>
+</ol>
+
+<h4>One that will not work here</h4>
+<p><strong>Datadog's error-budget / SLO abstraction.</strong> It tops criterion 1 and is still
+wrong for this product: it needs an organisation that treats a percentage as a contract and an
+operator fluent in <em>"a burn rate is a unitless value [coined by Google]"</em>. This
+Administrator is switching BSPs because the last vendor's numbers were marketing; a second layer
+of vendor math is the same failure in a better chart. Worse, Datadog's own docs delegate what
+counts as a "good event" to the monitor configuration — the exact ambiguity that makes the
+market's 67–98% claims meaningless. <b>Keep the alerting; drop the budget.</b></p>
+
+<!-- ============ PATTERNS ============ -->
+<h2>Patterns</h2>
+
+<p><strong>The key interaction problem, derived from the brief:</strong> how does an Administrator
+find what the AI got wrong, decide it matters, and change the AI so it stops — without reading
+every conversation?</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th>#</th><th>Pattern</th><th>How it works</th><th>In the wild</th><th>Fits when</th><th>Breaks when</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td><strong>Queue triage</strong></td><td>Every failure is a work item with a state; work the queue to zero</td><td>Sentry issues; Stripe's review queue; every helpdesk</td><td>Volume is bounded and each item is individually actionable</td><td>Volume is high — the queue becomes wallpaper within a week</td></tr>
+<tr><td class="num">2</td><td><strong>Clustered themes</strong> ✓</td><td>Failures grouped by cause; the unit of work is the theme, never the conversation</td><td>Search Console's "Why pages aren't indexed"; Sentry grouping; Discover Agent</td><td>Failures repeat and one fix serves a whole theme</td><td>Clustering is wrong — one bad group destroys trust in every group</td></tr>
+<tr><td class="num">3</td><td><strong>Sampled audit</strong></td><td>A sample is scored against a rubric; quality is inferred, not enumerated</td><td>Decagon's Watchtower; call-centre QA; LangSmith evaluators</td><td>You need a defensible number more than every failure</td><td>Someone wants <em>this</em> customer fixed — sampling cannot find them</td></tr>
+<tr><td class="num">4</td><td><strong>Counterfactual replay</strong> ✓</td><td>A change is evaluated against real past conversations before going live; the artifact is a diff</td><td>Radar's 6-month simulation; LangSmith experiments; Ada's simulations</td><td>Changes are risky and history exists</td><td>There is no history — day one, where the 10-minute criterion lives</td></tr>
+<tr><td class="num">5</td><td><strong>Natural-language authoring</strong></td><td>The operator states policy in words; the system writes the rule</td><td>Decagon's AOPs; Radar Assistant; Sierra's Ghostwriter</td><td>The operator is non-technical, the policy space open-ended</td><td>They cannot verify what was written — a legible UI becomes an opaque one</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note">
+  <p><b>Chosen: 2 · Clustered themes</b>, with <b>4 · Counterfactual replay</b> as the action taken
+  from a cluster. Three reasons from the brief: <b>(1)</b> the Administrator is not the Operator —
+  the brief makes the inbox "an exception surface, not the workspace", and queue triage quietly
+  rebuilds the shared inbox it rejects. <b>(2)</b> Five channels — a per-item queue multiplies by
+  channel, a theme is channel-agnostic. <b>(3)</b> Success is a rate, and rates do not move item by
+  item; clustering makes the unit of work the same size as the unit of measurement.</p>
+  <p><b>Second choice, under condition:</b> sampled audit, if accounts produce so many themes that
+  the job becomes proving the number rather than fixing the tail. <b>Disqualified:</b> queue
+  triage — the incumbent's shape, contradicts the brief, and fails criterion 5: you can close
+  items forever without the system getting better.</p>
+</div>
+
+<div class="note warn">
+  <p><span class="q">[?]</span> <b>Open on the chosen pattern.</b> The gate answer was the single
+  character "2" against a recommendation that bundled 2 with 4. The pairing is carried forward as
+  the recorded reading. Hypothesis: the human intended the recommendation as stated. To be
+  confirmed before <code>/dsf:ia</code>, since replay is a large build commitment that shapes the
+  main screen.</p>
+</div>
+
+<!-- ============ CONCLUSIONS ============ -->
+<h2>Conclusions</h2>
+
+<div class="scroll">
+<table>
+<thead><tr><th>Gap</th><th>Hypothesis</th><th>Follows from</th></tr></thead>
+<tbody>
+<tr><td>No BSP publishes how resolution is counted</td><td>A published, conservative definition — including what does not count and what reverses on reopen — is itself a differentiator for a buyer who has been burned once</td><td>Competitors, pattern 2; Benchmark dimension</td></tr>
+<tr><td>The market sells ceilings, not floors</td><td>This buyer will not believe a ceiling from a second vendor; a measured rate for their own account beats any claimed rate</td><td>Competitors, difference 2</td></tr>
+<tr><td>Nothing in the hard group can test a change before customers meet it</td><td>Counterfactual replay against the account's own history is the highest-value unbuilt mechanic in this market</td><td>Benchmark mechanic 1; Patterns 4</td></tr>
+<tr><td>The improvement loop has no name in the hard group</td><td>Naming the loop — theme → fix → validate → regression watch — is a product surface, not vocabulary</td><td>Competitors, pattern 3; Benchmark mechanics 2–3</td></tr>
+<tr><td>The brief said the incumbents' AI is fake</td><td>Partly wrong as stated; the correction is sharper — the AI exists but is an upsell on a keyword-flow core, so the paid default is still a decision tree</td><td>Competitors, difference 1</td></tr>
+<tr><td>No baseline exists for the −30% criterion</td><td>Only the product owner can supply it; until then the criterion is directionally right and numerically unverifiable</td><td>Competitors, open question 1</td></tr>
+</tbody>
+</table>
+</div>
+
+<h4>Hypotheses for later phases to test</h4>
+<ol>
+  <li>An Administrator will trust a <em>lower number that is defined</em> over a higher number
+  that is claimed. — phase 2b, then phase 4.</li>
+  <li>The theme, not the conversation, is the right unit of work for this persona. — phase 3: if
+  the sitemap needs a per-conversation queue as a primary Administrator destination, the pattern
+  choice was wrong.</li>
+  <li>Replay before enable is worth its build cost to an SMB Administrator, not only an enterprise
+  one. — phase 2b.</li>
+  <li>The 10-minute criterion and counterfactual replay are in tension on day one: a new account
+  has no history to replay against. — phase 3/4.</li>
+  <li>Naming the loop is what makes the product legible as "not another WhatsApp API SaaS" — but
+  if the vocabulary sounds like an observability tool, the anti-goal has been missed in the other
+  direction. — phase 5.</li>
+</ol>
+
+<footer>
+  Wati · phase 2a · <code>research/research.md</code> is the agent-readable source of truth; this
+  page is generated from it. Gate answers and their verbatim wording live in
+  <code>.design/decisions.md</code>. · <a href="../index.html">← Pipeline</a>
+</footer>
+
+</div>
+</body>
+</html>

@@ -11,8 +11,8 @@ design system and the handoff all live here as files. No Figma required.
 step and prompt to type, success criteria, and links to every viewable page. Live at
 **<https://johnvijaysolomon.github.io/wati/>**.
 
-**Current phase: 2 · Discover.** Phase 1 is written and awaiting `/dsf:check`; the next
-prompt to type is `/dsf:research`.
+**Current phase: 2 · Discover.** Phase 1 is signed off and tagged `phase-1-brief`. Research
+(2a) is done; the next prompt to type is `/dsf:users`.
 
 Built with [design-spec-framework](https://github.com/denysosadchyi/design-spec-framework) —
 spec-driven development for product design. Work is driven by `/dsf:*` commands in Claude
@@ -52,7 +52,15 @@ Open questions carried into phase 2 are marked `[?]` in `CLAUDE.md` → **Brief*
 ## Research
 
 <!-- phase 2 · competitors, benchmark, patterns -->
-`[?]` → `research/research.html`
+Twelve competitors in three groups, one benchmark dimension studied across categories, five
+interaction patterns and the one chosen. The finding that shapes everything downstream: in the
+WhatsApp BSP market the AI is a **second SKU bolted onto a keyword-flow core**, and of six
+products claiming 67–98% resolution, exactly one publishes how it counts. The chosen pattern is
+**clustered themes** — the unit of work is the theme, never the individual conversation.
+
+→ **[research/research.html](./research/research.html)** — the readable page, with the evidence
+inline · `research/research.md` — the agent-readable source of truth ·
+`research/screens/` — six captures backing the claims. Everything unverified is marked `[?]`.
 
 ## People
 

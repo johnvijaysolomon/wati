@@ -192,7 +192,29 @@ phase reading "mobile-first" anywhere should treat it as a defect, not an instru
 
 ### Research
 <!-- phase 2 · chosen interaction pattern · the three MVP mechanics · benchmark dimension · top three open questions · paths to research/ -->
-`[?]`
+Done 2026-08-17 (2a) — `research/research.md`, `research/research.html`, 6 screenshots in
+`research/screens/`.
+**Chosen interaction pattern: clustered themes** — failures are grouped by cause and the unit of
+work is the theme, never the individual conversation; **counterfactual replay** is the action
+taken from a cluster (carried as a recorded reading of a one-character gate answer — confirm
+before `/dsf:ia`). Queue triage is **disqualified**: it contradicts the brief's "inbox is an
+exception surface" and quietly rebuilds the shared inbox.
+**Benchmark dimension: proving the AI works** — how a product defines a resolution, measures it,
+shows what the AI got wrong, and turns that into a fix. Scored across categories; the two top
+scorers (LangSmith 34/40, Stripe Radar 31/40) are both "evaluate an automated decision-maker"
+products and neither is a support tool.
+**Three MVP mechanics:** (1) backtest a change against the account's own recent conversations
+before enabling it; (2) validate-fix with named states, so the product confirms the fix instead of
+the human assuming it; (3) automatic regression when a handled theme starts failing again.
+**Explicitly not carried:** error-budget / SLO framing — vendor math for a buyer who just left
+over vendor math.
+**Correction to the brief:** the incumbents' AI is not absent. It exists and is an *upsell* on a
+keyword-flow core (AiSensy ₹2,500 builder vs ₹3,500 AI Agent Builder; Interakt AI Agents ₹3,000/mo
+add-on), so the buyer's paid default is still a decision tree. The brief's problem statement holds
+in spirit and is wrong in wording — phase 1's third `[?]` closes this way, not as a clean yes.
+**Top three open questions:** the −30% baseline (owner-only, and the criterion is unverifiable
+without it); whether Wati prices by outcome (it changes the Administrator's surface); which of the
+ten roles are load-bearing.
 
 ### People
 <!-- phase 2 · primary persona and why · main job in "when / I want / so that" form · top-3 MVP jobs · paths to people/ -->

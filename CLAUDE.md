@@ -16,32 +16,30 @@ Approved at the phase-1 gate, 2026-08-17, by interrogation not drafting (`superp
 product is where you build, watch and correct it.
 
 **Who.** The **Administrator** of a business already running a WhatsApp BSP — Wati, AiSensy,
-Interakt, Gupshup. They arrive mid-category, not new to it: templates, contacts and a connected
-number in hand, and they know what a template approval is. They own the workspace — users,
-roles, channels, numbers, billing, integrations. Ten roles exist (Administrator, Campaign
-Manager, Template Manager, Operator, Developer, Contact Manager, Dashboard Viewer, Automation
-Manager, Billing Manager, Trial); **Administrator and Operator get designed views**, the other
-eight are permission-gated. `Trial` is a role, so the trial state is designed, not an afterthought.
+Interakt, Gupshup — arriving mid-category with templates, contacts and a connected number in
+hand, and owning the workspace: users, roles, channels, numbers, billing, integrations. Ten roles
+exist (Administrator, Campaign Manager, Template Manager, Operator, Developer, Contact Manager,
+Dashboard Viewer, Automation Manager, Billing Manager, Trial); **Administrator and Operator get
+designed views**, the other eight are permission-gated.
 
-**Problem.** The AI in the tool they have is fake — a keyword bot behind a flow builder. It
+**Problem.** The AI in the tool they have is fake — a keyword bot behind a flow builder that
 deflects nothing real, so humans still answer everything and the cost curve never bends. It is
 the business's problem before the user's: with nothing built they pay per conversation *and* per
 head.
 
 **Platform.** **Desktop web, primary**; tablet and mobile adapt down. This **inverts phase 8** —
-phase 4 designs at desktop width and phase 8 contracts. Deliberate; do not "correct" it back.
+phase 4 designs at desktop width, phase 8 contracts — and the inversion is deliberate.
 
 **Scope.** The Administrator's world, deep — set up the AI, watch it deflect, fix what it gets
-wrong, control who can do what. Inbox and campaigns are real but secondary. **Channels:**
+wrong, control who can do what; inbox and campaigns are real but secondary. **Channels:**
 WhatsApp, web chat widget, Instagram + Facebook DM, email, SMS — all five, reached as
-**connect / configure / monitor / govern**, not five parallel inboxes. That reading is what keeps
-"all five" and "deep, not broad" from contradicting each other.
+**connect / configure / monitor / govern**, not five parallel inboxes.
 
-**Constraints.** No deadline, team limit, or legal/regional fence stated. Greenfield brand: Wati
-is the name, the identity is designed fresh, the current Wati look constrains nothing. Inherited
-input, *not* a lock — phase 0 parks the brand green `#23A455` as a phase-5 starting point;
-`/dsf:concept` opens by asking whether it is a hard lock or a start. The repo is **public and
-world-readable**, accepted knowingly at this gate.
+**Constraints.** No deadline, team limit, or legal/regional fence stated, and the repo is
+**public and world-readable**, accepted knowingly at this gate. Greenfield brand — Wati is the
+name, the identity is designed fresh, the current Wati look constrains nothing, and phase 0's
+brand green `#23A455` is a phase-5 starting point rather than a lock (`/dsf:concept` opens by
+asking which).
 
 **It works if.** (1) A migrating Administrator gets from signup to the AI answering live traffic
 in **under 10 minutes of in-product time** — knowledge loaded, guardrails set, AI live; Meta's
@@ -187,7 +185,10 @@ the inbox is an exception surface, not the workspace · **desktop web is primary
 contracts instead of expanding · **five channels** as connect/configure/monitor/govern, not five
 inboxes · success is **10 min of in-product time to live** and **−30% cost per resolved
 conversation**. Three `[?]` are open and listed in the Brief section; phase 2 should close the
-third one.
+third one. Two implications the Brief block states only by naming them: `Trial` is one of the ten
+roles, so the trial state is a designed experience rather than an afterthought (phase 3 owns
+where it sits); and the phase-8 inversion means phase 4 designs at desktop width, so a later
+phase reading "mobile-first" anywhere should treat it as a defect, not an instruction.
 
 ### Research
 <!-- phase 2 · chosen interaction pattern · the three MVP mechanics · benchmark dimension · top three open questions · paths to research/ -->

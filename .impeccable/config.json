@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "people/personas.html"
+        ],
+        "createdAt": "2026-08-17T11:21:24.700Z",
+        "reason": "Claude: long-form research document, not app UI. L64 is a 2px neutral (--ink-3) rule on a <blockquote> holding a verbatim customer quote — typographic convention, not a card side-tab. L66-69 .note admonitions follow the docs-callout convention (GitHub alerts / MDN / Docusaurus); research/research.html uses the identical pattern and scanned clean. Not user confirmed."
+      }
+    ]
+  }
+}

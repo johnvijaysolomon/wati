@@ -218,7 +218,27 @@ ten roles are load-bearing.
 
 ### People
 <!-- phase 2 · primary persona and why · main job in "when / I want / so that" form · top-3 MVP jobs · paths to people/ -->
-`[?]`
+Done 2026-08-17 (2b) — `people/personas.md`, `people/jtbd.md`, `people/personas.html`.
+**Primary persona: "the one who has already failed once"** — a 2–10 person D2C or services
+business, most often India, who bought a BSP on price, set it up themselves in an afternoon,
+shipped a flow and watched it fail to hold a real conversation. Still answering WhatsApp
+personally. Chosen by the human at the `users.2` gate over the higher-volume ops lead:
+**evidence over inference** — every verbatim in the corpus comes from this segment.
+**Main job:** *When the same questions keep arriving on WhatsApp and I am the one answering them,
+I want them handled without me, so that I can spend my day on the work only I can do.*
+**Top-3 MVP jobs** (high for the primary persona AND uncovered by the market): (1) see it working
+on my own real questions within the hour; (2) find out about a bad answer before the customer
+tells me; (3) **leave without a fight** — the best-evidenced job in the project and one no
+competitor designs for.
+**Cut at the `users.4` gate:** campaign composer, drag-and-drop flow builder, per-conversation
+Administrator queue, error-budget dashboard, sampled QA scorecard.
+**Two consequences later phases must not rediscover:** the **−30% success criterion now belongs to
+a secondary persona** (at P1's volume it is not money), so **10 minutes to live is the dominant
+criterion**; and counterfactual replay survives for P1 **only if it costs seconds inline** —
+setup must stay under 30 minutes, so a pre-flight that is its own screen is out.
+**Standing `[?]` that affect design:** R3's importance to P1 (a guess that kept the benchmark's
+own job out of the MVP core); **email and SMS are unevidenced as inbound channels** for this
+persona — WhatsApp confirmed, Instagram supported, the other two carried on the brief's authority.
 
 ### Structure
 <!-- phase 3 · main flow · navigation model and tap depth to the main job · paths to ia/ -->

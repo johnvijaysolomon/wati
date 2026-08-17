@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wati · People</title>
+<style>
+  :root{
+    --bg:#0d0f12; --panel:#14171c; --panel-2:#191d23; --line:#242a32;
+    --ink:#e6e9ee; --ink-2:#a8b1bd; --ink-3:#6f7883;
+    --accent:#23a455; --warn:#c9a227; --bad:#c2554a;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:60rem;margin:0 auto;padding:4rem 1.5rem 6rem}
+  header{border-bottom:1px solid var(--line);padding-bottom:2rem;margin-bottom:3rem}
+  .eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;
+           color:var(--ink-3);margin:0 0 .75rem}
+  h1{font-size:2.25rem;line-height:1.15;margin:0 0 .75rem;letter-spacing:-.02em}
+  .lede{color:var(--ink-2);margin:0;max-width:46rem}
+  h2{font-size:.8rem;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;
+     color:var(--accent);margin:4rem 0 1.25rem;padding-top:2rem;border-top:1px solid var(--line)}
+  h3{font-size:1.15rem;margin:2.5rem 0 .75rem;letter-spacing:-.01em}
+  h4{font-size:.95rem;margin:2rem 0 .5rem;color:var(--ink-2)}
+  p{margin:0 0 1rem;max-width:46rem}
+  ul,ol{max-width:46rem;padding-left:1.25rem}
+  li{margin-bottom:.6rem}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(35,164,85,.35)}
+  a:hover{border-bottom-color:var(--accent)}
+  code{font-family:var(--mono);font-size:.85em;background:var(--panel-2);
+       border:1px solid var(--line);border-radius:3px;padding:.1em .35em}
+  .scroll{overflow-x:auto;margin:1.25rem 0;border:1px solid var(--line);border-radius:6px;
+          background:var(--panel)}
+  table{border-collapse:collapse;width:100%;font-size:.875rem;min-width:44rem}
+  th,td{text-align:left;padding:.7rem .85rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
+     color:var(--ink-3);background:var(--panel-2);white-space:nowrap}
+  tbody tr:last-child td{border-bottom:none}
+  .q{font-family:var(--mono);color:var(--warn);font-size:.85em;
+     background:rgba(201,162,39,.09);border:1px solid rgba(201,162,39,.28);
+     border-radius:3px;padding:.1em .35em}
+  .hyp{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--warn);border:1px solid rgba(201,162,39,.35);border-radius:3px;padding:.1em .4em}
+  .conf{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--accent);border:1px solid rgba(35,164,85,.35);border-radius:3px;padding:.1em .4em}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;
+        padding:1.5rem 1.6rem;margin:1.5rem 0}
+  .card.primary{border-color:rgba(35,164,85,.5);box-shadow:0 0 0 1px rgba(35,164,85,.12)}
+  .badge{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;
+         text-transform:uppercase;padding:.2em .6em;border-radius:3px;vertical-align:middle;
+         margin-left:.6rem;background:rgba(35,164,85,.14);color:var(--accent);
+         border:1px solid rgba(35,164,85,.4)}
+  .badge.sec{background:var(--panel-2);color:var(--ink-3);border-color:var(--line)}
+  .card h3{margin:0 0 .25rem;font-size:1.3rem}
+  .row{margin:1.1rem 0 0}
+  .row .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+          color:var(--ink-3);margin-bottom:.3rem}
+  .row p{margin:0;font-size:.95rem}
+  blockquote{margin:1.25rem 0 0;padding:.9rem 1.1rem;background:var(--panel-2);
+             border-left:2px solid var(--ink-3);border-radius:0 5px 5px 0;font-size:.95rem}
+  blockquote cite{display:block;margin-top:.5rem;font-style:normal;font-size:.8rem;color:var(--ink-3)}
+  .note{border-left:2px solid var(--accent);background:var(--panel);
+        padding:1rem 1.25rem;margin:1.5rem 0;max-width:46rem;border-radius:0 6px 6px 0}
+  .note.warn{border-left-color:var(--warn)}
+  .note.bad{border-left-color:var(--bad)}
+  .note p:last-child{margin-bottom:0}
+  .job{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+       padding:1.1rem 1.25rem;margin:1rem 0}
+  .job .w{color:var(--ink-3);font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;
+          text-transform:uppercase}
+  .core{counter-reset:c;list-style:none;padding-left:0}
+  .core li{background:var(--panel);border:1px solid rgba(35,164,85,.3);border-radius:6px;
+           padding:1rem 1.2rem;margin-bottom:.9rem}
+  .meta{font-family:var(--mono);font-size:.78rem;color:var(--ink-3)}
+  footer{margin-top:5rem;padding-top:2rem;border-top:1px solid var(--line);
+         font-size:.82rem;color:var(--ink-3)}
+  @media (max-width:40rem){ .wrap{padding:2.5rem 1rem 4rem} h1{font-size:1.7rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Wati · Phase 2b · Discover</p>
+  <h1>People</h1>
+  <p class="lede">Three personas split by behaviour, one main job with nine around it, and the
+  three that make the MVP. Personas here are a synthesis of research, not an act of authorship —
+  so every block names its source, and the <span class="q">[?]</span> marks are left where the
+  evidence ran out.</p>
+  <p class="meta" style="margin-top:1.25rem">2026-08-17 · <b>12 <span class="q">[?]</span></b> ·
+  self-critique: 7 confirmed / 7 hypothesis / 1 quote left deliberately empty ·
+  sources: <code>people/personas.md</code>, <code>people/jtbd.md</code>,
+  <a href="../research/research.html">research</a></p>
+</header>
+
+<div class="note bad">
+  <p><b>Read this before the personas.</b> The research behind them was collected as
+  <em>product</em> evidence — pricing pages, docs, vendor claims — and contained no customer voice
+  at all. Real reviews were pulled in specifically for this phase. Everything below that is
+  inferred rather than observed says so, in place. A persona set with no
+  <span class="q">[?]</span> in it would mean the gaps had been filled with plausible writing.</p>
+</div>
+
+<!-- ============ PERSONAS ============ -->
+<h2>Personas</h2>
+
+<div class="card primary">
+  <h3>The one who has already failed once <span class="badge">Primary</span></h3>
+  <p class="meta">Chosen by the human at the persona gate, against a recommendation for Persona 2 —
+  evidence over inference.</p>
+
+  <div class="row"><div class="k">Context</div>
+  <p>A 2–10 person D2C or services business, most often India. They bought a BSP on price, set it
+  up themselves in an afternoon with a drag-and-drop builder, shipped a flow, and watched it fail
+  to hold a real conversation. Still answering WhatsApp personally while paying ₹1,500–5,000/month
+  plus per-message costs.</p></div>
+
+  <div class="row"><div class="k">Jobs</div>
+  <p>Get the repeat questions answered without them; stop paying for something that does not work;
+  be able to leave without a fight.</p></div>
+
+  <div class="row"><div class="k">Pains <span class="conf">confirmed</span></div>
+  <p>The automation is felt to be shallow but they cannot articulate why. Support takes days
+  (<em>"replies took 2-3 days"</em>). And the exit is worse than the product: dark patterns on the
+  cancellation form, forced annual billing at checkout, charges continuing for months.</p></div>
+
+  <div class="row"><div class="k">Convinces them <span class="hyp">hypothesis</span></div>
+  <p>A number they can check themselves rather than a number they are told. Inferred from the
+  market needing to <em>guarantee</em> a rate rather than merely claim one — no reviewer says
+  it.</p></div>
+
+  <div class="row"><div class="k">Scares them off <span class="conf">confirmed</span></div>
+  <p>Annual lock-in discovered at checkout, and support that disappears exactly when needed. The
+  sharpest evidence in the project: their BSP offers <em>"no technical support available and only
+  a chatbot is offered, with no human support even after sending emails."</em> <b>Their lived
+  experience of AI support is being stonewalled by one.</b></p></div>
+
+  <blockquote>"Sometimes it feels limited in automation options and not flexible enough for
+  complex workflows"<cite>— Sulimam A, Design, 2–10 employees · Capterra</cite></blockquote>
+</div>
+
+<div class="card">
+  <h3>The one who owns the number <span class="badge sec">Secondary</span></h3>
+  <p class="meta">Proposed as primary and overruled at the gate. The argument still stands on its
+  own terms; what it lacked was evidence.</p>
+
+  <div class="row"><div class="k">Context</div>
+  <p>Support or ops lead at a scaling D2C brand, roughly 11–50 people, 5–10 agent seats, WhatsApp
+  volume high enough that cost per conversation is a line item someone asks about.
+  <span class="q">[?]</span> how they came to own the tool is not in the evidence and is
+  deliberately not asserted.</p></div>
+
+  <div class="row"><div class="k">Pains <span class="conf">confirmed</span></div>
+  <p>They cannot prove the number. The AI they have is a paid add-on bolted onto a keyword-flow
+  core, so the thing they are measured on is an upsell rather than the product. And the tool covers
+  one channel while their customers use several.</p></div>
+
+  <div class="row"><div class="k">Convinces them <span class="conf">confirmed</span></div>
+  <p>Seeing <em>which</em> conversations the AI resolved and being able to disagree with the label.
+  Only Intercom makes the definition contestable — no charge when the customer asks for a human,
+  and a refund if the conversation is reopened.</p></div>
+
+  <blockquote>"Despite multiple requests—five, to be exact—to delete my data and stop emailing me,
+  Wati.io has continued to flood my inbox with spam."<cite>— Aaron B, Co-founder, 51–200 employees
+  · Capterra · <b>labelled off-job:</b> the only review from a company this size, and it is about
+  marketing conduct, not daily use</cite></blockquote>
+</div>
+
+<div class="card">
+  <h3>The one who gets called when it breaks <span class="badge sec">Secondary</span></h3>
+  <div class="row"><div class="k">Context</div>
+  <p>An in-house developer or implementation partner, pulled in exactly where self-serve stops:
+  setup targets non-technical operators, <em>"however, advanced integrations (custom APIs, BYOLLM)
+  require technical capability."</em></p></div>
+  <div class="row"><div class="k">Pains and trust <span class="hyp">hypothesis</span></div>
+  <p>Entirely inferred from what the benchmark products built — no developer voice exists in this
+  corpus. <span class="q">[?]</span> <b>No quote.</b> Left empty rather than composed.</p></div>
+</div>
+
+<div class="note">
+  <p><b>Merged.</b> "Indian SMB owner" and "SEA / LatAm SMB owner" are one persona — same jobs,
+  same pains, differing only in currency and timezone. <b>Not made personas:</b> Campaign Manager
+  and Template Manager. They are roles in the brief's ten-role model, not distinct behaviours in
+  the evidence.</p>
+</div>
+
+<!-- ============ JOBS ============ -->
+<h2>Jobs</h2>
+
+<div class="job">
+  <div class="w">Main job</div>
+  <p style="font-size:1.05rem;margin:.4rem 0 0"><b>When</b> the same questions keep arriving on
+  WhatsApp and I am the one answering them, <b>I want</b> them handled without me, <b>so that</b>
+  I can spend my day on the work only I can do.</p>
+</div>
+
+<h4>Related — on the way to the main one</h4>
+<div class="scroll">
+<table>
+<thead><tr><th>#</th><th>When… I want… so that…</th><th>Persona</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>R1</td><td><b>When</b> I am setting this up for the first time, <b>I want</b> to see it answering my own real questions within the hour, <b>so that</b> I know I have not bought another thing that does not work</td><td>P1</td><td><span class="conf">confirmed</span></td></tr>
+<tr><td>R2</td><td><b>When</b> a customer gets a bad answer, <b>I want</b> to find out before they tell me, <b>so that</b> I am not learning about my own business from a complaint</td><td>P1, P2</td><td><span class="hyp">hyp · strong</span></td></tr>
+<tr><td>R3</td><td><b>When</b> someone asks me whether this is actually working, <b>I want</b> a number I can defend, <b>so that</b> I am not just repeating what a vendor told me</td><td>P2, P1</td><td><span class="hyp">hyp for P1</span></td></tr>
+<tr><td>R4</td><td><b>When</b> I change how it answers, <b>I want</b> to know what that will do before customers see it, <b>so that</b> I am not experimenting on real people</td><td>P3, P2</td><td><span class="hyp">hypothesis</span></td></tr>
+<tr><td>R5</td><td><b>When</b> it stops being worth it, <b>I want</b> to leave without a fight, <b>so that</b> I am not trapped paying for something I have stopped using</td><td>P1</td><td><span class="conf">best evidenced</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h4>Emotional and social</h4>
+<div class="scroll">
+<table>
+<thead><tr><th>#</th><th>Job</th><th>Persona</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>E1</td><td>When I have been burned by a vendor once, I want to be able to check things myself, so that I never have to take another promise on faith</td><td>P1</td><td><span class="conf">strong</span></td></tr>
+<tr><td>E2</td><td>When I let something answer my customers for me, I want to feel I still control what it says, so that I am not embarrassed by my own business</td><td>P1, P2</td><td><span class="hyp">hypothesis</span></td></tr>
+<tr><td>S1</td><td>When a customer messages my business, I want them to feel they reached a business that has its act together</td><td>P1</td><td><span class="q">[?]</span></td></tr>
+<tr><td>S2</td><td>When I am asked how we keep up with customer messages at our size, I want a good answer, so that we look more capable than our headcount</td><td>P1</td><td><span class="hyp">half</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<p class="meta">Four further jobs are parked in <b>Hypotheses</b> in <code>people/jtbd.md</code>,
+each with what would confirm it and where to look. They are not in the list above because nothing
+backs them yet.</p>
+
+<!-- ============ MATRIX ============ -->
+<h2>Coverage matrix</h2>
+<p>Importance 1–3 per persona, plus what closes the job and whether the market already does.
+<span class="q">[?]</span> means unknown — never an averaged number.</p>
+
+<div class="scroll">
+<table>
+<thead><tr><th>Job</th><th>P1 · primary</th><th>P2</th><th>P3</th><th>What closes it</th><th>Market covers it?</th></tr></thead>
+<tbody>
+<tr><td><b>Main</b> — questions handled without me</td><td>3</td><td>3</td><td>1</td><td>An AI answering from the business's own material across channels</td><td><b>Partly</b> — everyone claims it; the BSPs sell it as a paid add-on</td></tr>
+<tr><td><b>R1</b> — working within the hour</td><td>3</td><td>2 <span class="q">[?]</span></td><td>2</td><td>A first-run path reaching a live answer, with Meta's wait running in parallel</td><td><b>No</b> — "10-minute approval" advertised against 1–2 business days tested</td></tr>
+<tr><td><b>R2</b> — find out before the customer tells me</td><td>3</td><td>3</td><td>2 <span class="q">[?]</span></td><td>Failure themes surfaced automatically, with regression when a fixed theme returns</td><td><b>No</b> — aspirational group only</td></tr>
+<tr><td><b>R3</b> — a number I can defend</td><td>2 <span class="q">[?]</span></td><td>3</td><td>1</td><td>A published, conservative definition measured on the account's own traffic</td><td><b>Barely</b> — only Intercom, and only because it bills on it</td></tr>
+<tr><td><b>R4</b> — know what a change will do first</td><td>1</td><td>2</td><td>3</td><td>Replay a change against the account's recent conversations and diff the outcomes</td><td><b>No</b> — nothing in the hard group</td></tr>
+<tr><td><b>R5</b> — leave without a fight</td><td>3</td><td>2 <span class="q">[?]</span></td><td>1</td><td>Export, cancellation and billing as legible as signup</td><td><b>No — actively the opposite</b></td></tr>
+<tr><td><b>E1</b> — check things myself</td><td>3</td><td>2 <span class="q">[?]</span></td><td>2 <span class="q">[?]</span></td><td>Everything the product asserts is traceable to something you can open</td><td><b>No</b> — the norm is an unexplained percentage</td></tr>
+<tr><td><b>E2</b> — feel in control of what it says</td><td><span class="q">[?]</span></td><td><span class="q">[?]</span></td><td>2 <span class="q">[?]</span></td><td>Guardrails readable back in the Administrator's own words</td><td><b>Partly</b> — Sierra, Decagon</td></tr>
+<tr><td><b>S1</b> — customers not fobbed off</td><td><span class="q">[?]</span></td><td><span class="q">[?]</span></td><td>1</td><td><span class="q">[?]</span> no feature proposed — the job is unevidenced</td><td><span class="q">[?]</span> nobody measures it publicly</td></tr>
+<tr><td><b>S2</b> — look more capable than our headcount</td><td>2</td><td>1 <span class="q">[?]</span></td><td>1</td><td><span class="q">[?]</span> served incidentally by the main job</td><td><b>Rhetorically</b> — every vendor sells it, none builds for it</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ============ MVP ============ -->
+<h2>The MVP core</h2>
+<p>Three jobs: high for the primary persona <b>and</b> uncovered by the market. Read off the
+matrix, not argued.</p>
+
+<ol class="core">
+  <li><b>See it working on my own real questions within the hour.</b><br>
+  <span class="meta">P1 = 3 · uncovered — vendors advertise "10-minute API approval" against a
+  tested "1–2 business days minimum", and nobody designs the waiting state.</span></li>
+  <li><b>Find out about a bad answer before the customer tells me.</b><br>
+  <span class="meta">P1 = 3 · uncovered — named only in the aspirational group; the hard group has
+  no vocabulary for it.</span></li>
+  <li><b>Leave without a fight.</b><br>
+  <span class="meta">P1 = 3 · actively the opposite — four verbatim reviews document dark patterns,
+  forced annual billing and charges continuing after cancellation.</span></li>
+</ol>
+
+<div class="note warn">
+  <p><b>Two costs, shown before the gate rather than after.</b> The <em>main job</em> is
+  deliberately not in the core — every competitor claims it, so it is table stakes rather than
+  differentiation. And <b>"a number I can defend" misses the core</b>, despite the entire benchmark
+  dimension being built around it, because it scores 2 for the primary persona and 3 for the
+  secondary one. It re-enters the moment the primary persona flips back.</p>
+</div>
+
+<h4>Cut candidates</h4>
+<div class="scroll">
+<table>
+<thead><tr><th>Feature</th><th>Why it closes nothing</th></tr></thead>
+<tbody>
+<tr><td><b>Campaign / broadcast composer</b></td><td>No job in the matrix requires it; no persona's evidenced pain touches outbound</td></tr>
+<tr><td><b>Drag-and-drop flow builder</b></td><td>Keeping one alongside the AI rebuilds the competitor's exact shape — the thing the research identifies as the failure. <b>The aggressive cut:</b> it removes the category's default fallback if the AI answers badly on day one</td></tr>
+<tr><td><b>Per-conversation queue for the Administrator</b></td><td>R2 is closed by themes, not items. A queue serves the Operator, who is not primary</td></tr>
+<tr><td><b>Error-budget / SLO dashboard</b></td><td>Rejected at the benchmark — vendor math for a buyer who left over vendor math</td></tr>
+<tr><td><b>Sampled QA scorecard</b></td><td>The conditional second-choice pattern; the theme volume it needs does not exist at P1's scale. A cut for now, not forever</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ============ HONESTY ============ -->
+<h2>What we still do not know</h2>
+
+<div class="note bad">
+  <p><b>The dangerous subset</b> — claims that drive design decisions and rest on
+  <span class="q">[?]</span>, ordered by what they would cost if wrong.</p>
+  <ol>
+    <li><b>R4 scores 1 for the primary persona.</b> Narrowed, not closed: the constraint is the
+    time budget, not the concept. Setup must stay "under 30 minutes" because these buyers are
+    "running a business, not a software project" — so replay survives <b>only if it costs seconds
+    and happens inline</b>. Nobody in the corpus has been observed using a pre-flight at all.</li>
+    <li><b>R3 scores 2 for P1, and that 2 is a <span class="q">[?]</span>.</b> That single cell
+    kept the benchmark dimension's own job out of the MVP core. A scope decision resting on a guess
+    with a number attached.</li>
+    <li><b>Five channels are justified by vendor-side evidence.</b> WhatsApp is confirmed (78% of
+    Indian SMBs), Instagram is supported generically — <b>email and SMS are unevidenced as inbound
+    channels for this persona</b> and are carried on the brief's authority alone.</li>
+    <li><b>"Still answering WhatsApp personally"</b> is a hypothesis carrying the main job.</li>
+    <li><b>E1's emotional framing is the designer's, not the user's.</b> The trust failures are
+    confirmed; "wants to check things himself" is a reading of them.</li>
+  </ol>
+</div>
+
+<div class="note bad">
+  <p><b>The brief's problem statement has now been contradicted twice.</b> It says this buyer
+  switches because the AI is fake. Phase 2a corrected that once — the AI exists, it is an upsell on
+  a keyword-flow core. This phase went looking specifically for people leaving over bad AI answers
+  and <b>found none</b>. What the reviews record instead: the platform "was not working at all",
+  implementation "entirely left to them with no support", a promised Relationship Manager who never
+  appeared, "$150 but the software never worked" with a refund refused. <b>They leave over absent
+  support, billing traps and a product that did not work — not over answer quality.</b> That
+  belongs in <code>/dsf:change</code> against the signed-off brief, not in a quiet patch here.</p>
+</div>
+
+<footer>
+  Wati · phase 2b · <code>people/personas.md</code> and <code>people/jtbd.md</code> are the
+  agent-readable sources of truth. Gate answers live verbatim in
+  <code>.design/decisions.md</code>. · <a href="../research/research.html">← Research</a> ·
+  <a href="../index.html">Pipeline</a>
+</footer>
+
+</div>
+</body>
+</html>

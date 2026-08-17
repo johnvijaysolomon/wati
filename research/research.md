@@ -318,3 +318,155 @@ One entry per gap: the hypothesis, and the section above it follows from.
 5. **Naming the loop is what makes the product legible as "not another WhatsApp API SaaS".** Test
    in phase 5 (voice) — if the loop's vocabulary sounds like an observability tool, the brief's
    anti-goal has been missed in the other direction.
+
+---
+
+## Re-research after personas
+
+Appended by `/dsf:users`. **Written in two passes, and the order is recorded because it deviates
+from the command.** Pass 1 (`users.1`, below) was pulled forward *before* the persona gate: the
+COMPETITORS section above is product evidence — pricing pages, docs, marketing — and contains no
+review, forum post or interview. Building personas on it would have produced four blocks of
+`[?]` including the quotes, and a persona gate with nothing in it to judge. Pass 2 is appended at
+`users.6` after the self-critique, as the command intends.
+
+### Pass 1 — customer voice, collected before the persona gate
+
+**R1 · Team size is small, and the reviews say so directly.** Wati's Capterra reviewers self-report
+as `2-10 employees` and `51-200 employees`; the design-role reviewer quoted at R5 is a 2–10-person
+company. Pricing corroborates: Respond.io includes 5 users (Starter) and 10 (Growth), Interakt's
+Sales CRM includes 5 agents at +₹499 each.
+Source: [Wati reviews, Capterra](https://www.capterra.com/p/204314/WATI/reviews/) ·
+[respond.io/pricing](https://respond.io/pricing) · [interakt.shop/pricing](https://www.interakt.shop/pricing/)
+
+**R2 · The "10 minutes" claim is a vendor claim, and the tested reality is a staircase.** AiSensy
+advertises *"10-minute API approval"*; the tested sequence is API activation ~10 min → display-name
+verification **3–4 hours** → template approval **24–48 hours**, and *"users waiting for the complete
+stack should expect 1-2 business days minimum"*. Separately, *"time from signup to working bot:
+15-20 minutes"* for a basic FAQ bot.
+Source: [AiSensy review, Chatbotscape](https://chatbotscape.com/reviews/aisensy-review)
+**Bearing on the brief:** this supports the reading recorded at the phase-1 gate — 10 minutes of
+*in-product* time with Meta's external wait excluded — and contradicts the looser reading that the
+whole path takes hours. `[?]` single third-party source; a second would strengthen it.
+
+**R3 · Billing and cancellation are where trust actually dies in this category.** Verbatim from Wati's
+own Capterra page: *"support becomes unresponsive once you request cancellation"* (Nicholas S, CEO,
+2–10 employees); *"The process is confusing and filled with unnecessary friction...the chatbot and
+documentation use dark patterns that make it hard to find the actual cancellation form."* (Verified
+Reviewer, CEO); *"they claim to offer monthly billing, but in reality, force annual payments once you
+proceed to checkout."* (Tarek Mohamad Al Haddad T, Manager); *"I have been trying to cancel my
+membership for three months now...Despite this, they continue to charge me every month."* (Zaid A,
+Account Manager).
+Source: [Wati reviews, Capterra](https://www.capterra.com/p/204314/WATI/reviews/)
+**Scope note:** the human struck Wati from the competitor set at the `research.1` gate, so these are
+**not** used as competitor evidence. They are used as *customer voice for this category's buyer* —
+the richest available, because this buyer has been writing about this exact product. Flagged for the
+human to strike if that reading is unwanted.
+
+**R4 · Support latency is a recurring, cross-vendor complaint, worst for India-timezone teams.**
+AiSensy TrustPilot: *"replies took 2-3 days"*. Third-party comparison reports Wati and Interakt's
+email-only support as *"a material weakness for India-based teams"*, while AiSensy's 5-star cluster
+praises Indian-timezone support.
+Source: [Chatbotscape](https://chatbotscape.com/reviews/aisensy-review) ·
+[CompareBizTech](https://www.comparebiztech.com/wati-vs-aisensy-vs-interakt/) · `[?]` both are
+affiliate-shaped comparison sites; directional, not authoritative.
+
+**R5 · Automation limits are felt, but described vaguely by the people who feel them.**
+*"Sometimes it feels limited in automation options and not flexible enough for complex workflows"*
+(Sulimam A, Design, 2–10 employees). AiSensy's stated constraints are concrete: **WhatsApp-only —
+no Instagram, Messenger, SMS, email or website widget** — and **English-only AI Agent responses**
+("multilingual response generation is coming soon").
+Source: [Wati reviews, Capterra](https://www.capterra.com/p/204314/WATI/reviews/) ·
+[Chatbotscape](https://chatbotscape.com/reviews/aisensy-review)
+**Bearing on the brief:** the brief's five-channel scope is a real differentiator against the
+hard group, not a checkbox.
+
+**R6 · Setup is self-serve by design; developers appear only at the edges.** AiSensy *"targets
+non-technical operators"* with a drag-and-drop builder, and *"user-friendly setup"* appears in
+roughly 50% of recent G2 reviews; *"however, advanced integrations (custom APIs, BYOLLM) require
+technical capability."* Interakt sells `Advanced [Branching, Logical Flows, API calls]` as the step
+up.
+Source: [Chatbotscape](https://chatbotscape.com/reviews/aisensy-review) ·
+[interakt.shop/pricing](https://www.interakt.shop/pricing/)
+
+**R7 · The economic frame the buyer already uses.** Indian SMBs spend roughly **₹1,500–5,000/month**
+in platform fees plus message volume, and a basic chatbot is positioned as *"less than the cost of a
+single additional support hire"*.
+Source: [SpringEdge / category guides, via search](https://www.springedge.com/best-whatsapp-business-api-providers-india)
+· `[?]` vendor-adjacent content marketing; treat the range as directional. A hard baseline for the
+brief's −30% criterion still does not exist and remains owner-only.
+
+**R8 · A platform constraint the brief said did not exist.** Effective **15 January 2026**, Meta bars
+"AI Providers" from using the WhatsApp Business Solution to distribute general-purpose AI assistants
+where such technology is *"the primary (rather than incidental or ancillary) functionality"* —
+aimed at OpenAI, Perplexity, Luzia, Poke. Meta stated explicitly that *"this move doesn't affect
+businesses that are using AI to serve customers on WhatsApp. For instance, a travel company running
+a bot for customer service won't be barred."*
+Source: [TechCrunch, 2025-10-18](https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform/)
+**Bearing on the brief:** the brief records "no legal or regional fence stated". One now exists
+nearby. On this evidence it does **not** bar Wati's use case — Wati equips businesses to serve their
+own customers, which is the carve-out Meta named. It is recorded as a constraint to design *with*,
+not around: an AI-first WhatsApp product should be able to show that its agent acts for the business
+that owns the number. `[?]` residual risk unquantified — how Meta polices "primary functionality"
+for a platform whose pitch is "the AI resolves the conversation" is not knowable from the article.
+
+### Pass 2 — the three questions from the self-critique
+
+Run at `users.6` against the dangerous subset in `people/personas.md`. Answers are **partial and
+say so**; one came back as a useful negative.
+
+**Q1 · Does a 2–10 person operator tolerate a test step before going live?**
+**Partial — and it reframes the question from *whether* to *how much*.** The category's own
+guidance is that *"setup time should be under 30 minutes"* because *"small business owners are
+running a business, not a software project, and platforms requiring days of configuration are not
+designed for them"*; separately, *"89% of customers face friction during onboarding, and 13% will
+switch to a competitor after just one bad experience"*.
+Source: [Conferbot](https://www.conferbot.com/blog/chatbot-builder-for-small-business) ·
+[Wonderchat](https://wonderchat.io/blog/ai-user-onboarding-2026) · `[?]` both are vendor content
+marketing; directional, and neither observes this persona directly.
+**Effect on the design:** counterfactual replay is not disqualified for P1 — the constraint is the
+**time budget**, not the concept. A replay that costs seconds and happens inline survives; a
+replay that is its own ceremony, its own screen and its own decision does not. Dangerous-subset
+item 1 narrows from "is this the wrong persona for replay?" to "replay must cost seconds". It does
+**not** close: nobody in the corpus has been observed using a pre-flight.
+
+**Q2 · Is there demand-side evidence for channels beyond WhatsApp?**
+**Partial, and weaker than the brief assumes.** WhatsApp's dominance in this segment is
+well-evidenced — *"78% of SMBs already use WhatsApp for business"* in India and *"98% open rates
+versus 22% for email"*. For other channels the evidence is generic rather than segment-specific:
+*"67% of customers find contacting customer support on social media convenient"* and *"80% of
+consumers use social media to interact with brands"*. Tooling corroborates demand indirectly —
+several products consolidate WhatsApp and Instagram inboxes specifically.
+Source: [IAMAI Digital India 2026, via Indujitechnologies](https://www.indujitechnologies.com/blog/whatsapp-marketing-indian-smbs)
+· [Kayako](https://kayako.com/blog/social-media-customer-service-statistics/) ·
+[Spurnow](https://www.spurnow.com/en/blogs/shared-inbox-software)
+**Effect on the design:** `[?]` **remains open and is now sized.** No source gives a channel-share
+breakdown of inbound volume for this persona. WhatsApp + Instagram is defensible on evidence;
+**email and SMS are not evidenced as inbound channels for this persona at all** and are carried on
+the brief's authority alone. Dangerous-subset item 3 stands.
+
+**Q3 · Does anyone describe leaving because the bot or AI failed?**
+**Answered, and the answer is no — which is the most consequential finding of this pass.**
+Searching one- and two-star reviews of Wati, AiSensy and Interakt for AI or chatbot failure
+surfaces complaints about something else entirely: the platform *"was not working at all"* and a
+contact list that would not upload while credits were consumed; implementation *"entirely left to
+them with no support available when questions arose"*; a promised Relationship Manager who never
+appeared; *"paid over $150 but the software never worked"* with a refund refused. Not one review
+in the corpus describes the AI giving wrong answers.
+Source: [Wati reviews, Capterra](https://www.capterra.com/p/204314/WATI/reviews/) ·
+[AiSensy, Trustpilot](https://ca.trustpilot.com/review/aisensy.com) ·
+[SaaSHub AiSensy status](https://www.saashub.com/aisensy-status)
+**The sharpest single quote in the whole research** — a reviewer complaining that their BSP offers
+*"no technical support available and only a chatbot is offered, with no human support even after
+sending emails"*. The buyer's lived experience of AI support is **being stonewalled by one**. Any
+product that asks this person to trust an AI with their own customers is arguing against that
+memory.
+**Effect on the brief:** phase 2a already corrected the problem statement once (the AI exists; it
+is an upsell on a keyword core). Pass 2 pushes further in the same direction: **in this corpus,
+nobody leaves because the AI answered badly. They leave because support did not answer at all,
+because billing trapped them, and because the platform did not work.** The brief's stated reason
+for switching is not the reason the evidence records. This is now a **two-finding contradiction**
+against a signed-off artifact and belongs in `/dsf:change`, not in a patch here.
+**Effect on the jobs:** R5 ("leave without a fight") and E1 ("check things myself") move from
+well-evidenced to **the best-evidenced claims in the project**, and the MVP core selected at the
+`users.4` gate is validated by a source the gate did not yet have.

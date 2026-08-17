@@ -65,7 +65,15 @@ inline · `research/research.md` — the agent-readable source of truth ·
 ## People
 
 <!-- phase 2 · personas and jobs -->
-`[?]` → `people/personas.html`
+Three personas split by behaviour, ten jobs, and the three that make the MVP. The primary persona
+is **the one who has already failed once** — a 2–10 person business that bought a BSP on price and
+watched it fail. The MVP core is: see it working within the hour · find out about a bad answer
+before the customer tells you · **leave without a fight**, which is the best-evidenced job in the
+project and one no competitor designs for.
+
+→ **[people/personas.html](./people/personas.html)** — personas, jobs, the coverage matrix and
+what is still unknown · `people/personas.md` · `people/jtbd.md`. The `[?]` marks are visible on
+purpose: they are where the evidence ran out.
 
 ## Structure
 

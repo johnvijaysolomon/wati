@@ -221,3 +221,49 @@ the tail.
 **Option:** n/a
 **Propagated:** `research/research.md` PATTERNS + CONCLUSIONS, `CLAUDE.md` Research context block,
 `.design/progress/phase-2.md`. `/dsf:ia` (phase 3) derives the sitemap from this pattern.
+
+## 2026-08-17 · gate
+
+**Decided:** "1" — the phase-2b persona gate. **Persona 1, "the one who has already failed once"
+(2–10 person D2C business, set the BSP up themselves, watched it fail), is PRIMARY**, against a
+recommendation for Persona 2 ("the one who owns the number", ops lead at a scaling brand). The
+human chose the persona the evidence describes over the persona the arithmetic selects: every
+verbatim quote in the corpus comes from a 2–10 employee company, while the case for Persona 2
+rested on the −30% criterion's economics and not on a single user statement.
+**Consequence, recorded because it is a real cost of the choice:** this changes which success
+criterion drives the design. At Persona 1's volume, −30% cost per resolved conversation is close
+to meaningless, so **10 minutes to live becomes the dominant criterion** and −30% now measures
+value for a *secondary* persona. Left open for the human: re-scope the criterion to Persona 2,
+replace it for Persona 1 with something their volume can move, or accept design-for-one and
+measure-on-another. That is a `/dsf:change` against the signed-off brief when it is taken.
+**Contradicts:** nothing written — but it puts the brief's second success criterion under strain,
+which is logged here rather than silently absorbed.
+**Option:** n/a
+**Propagated:** `people/personas.md` (primary flag, both rationales, open-questions item 1,
+self-critique table), and downstream `people/jtbd.md`, the coverage matrix and the MVP core, all
+of which are now weighted to Persona 1. One invented clause ("inherited rather than chose") was
+removed from Persona 2 in the same pass rather than kept with a label.
+
+## 2026-08-17 · gate
+
+**Decided:** "good to g[o]" — the phase-2b MVP-core gate. **Three core jobs kept:** (1) see it
+working on my own real questions within the hour; (2) find out about a bad answer before the
+customer tells me; (3) leave without a fight. All three score 3 for the primary persona and are
+uncovered by the market, read off the matrix rather than argued.
+**Five features cut:** campaign / broadcast composer; drag-and-drop flow builder; per-conversation
+agent queue as an Administrator destination; error-budget / SLO dashboard; sampled QA scorecard
+(a cut for now, conditional on theme volume that P1 does not have).
+**Two consequences stated at the gate and accepted:** (a) the main job — repeat questions handled
+without me — is deliberately **not** in the core, because every competitor claims it: table stakes,
+not differentiation; (b) "a number I can defend", the job the whole benchmark dimension was built
+around, **misses the core** because it scores 2 for the primary persona and 3 for the secondary
+one. It re-enters the moment the primary persona flips back. That is the visible cost of the
+`users.2` gate and it was shown before this gate was taken.
+**Risk named and accepted:** cutting the flow builder removes the category's default fallback, so
+the first-run experience has no safety net if the AI answers badly on day one. AiSensy and Interakt
+both sell that builder as the core product.
+**Contradicts:** `nothing` — but "leave without a fight" is a job no competitor designs for and the
+brief does not mention, so it enters the spec here for the first time.
+**Option:** n/a
+**Propagated:** `people/jtbd.md` (MVP core + cut candidates), `CLAUDE.md` People block, and
+`/dsf:ia` (phase 3), which turns these three jobs into the sitemap.

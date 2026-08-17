@@ -154,3 +154,21 @@ redundant as well as forbidden.
 **Propagated:** `index.html` `context.product` set to `Wati`; the two `{{PRODUCT_NAME}}`
 placeholders in the markup left intact by design. Reported at sign-off as a framework bug in
 `/dsf:brief` step 6, not as a phase-1 defect.
+
+## 2026-08-17 · gate
+
+**Decided:** "tag it" — the phase-1 sign-off gate, on the re-check verdict of 13/13. Preceded by
+"compress it" at the 12/13 verdict, which closed checklist item 2: the Brief block's Who,
+Problem, Platform, Scope and Constraints paragraphs were each cut to two sentences. No fact was
+re-decided and no gate answer was revisited — only elaboration was removed. Two implications that
+would have been lost moved into the Brief context block rather than out of the repo: `Trial` being
+one of the ten roles (so the trial state is designed, not an afterthought) and the phase-8
+inversion warning.
+**Contradicts:** `nothing`
+**Option:** n/a
+**Propagated:** `CLAUDE.md` (Brief block compressed, Brief context block extended),
+`.design/checklists/results/phase-1.md` (fresh 13/13 verdict replacing the 12/13 one),
+`index.html` (phase 1 `criteria` all-passed, `status: done`, `tagged: true`), git tag
+`phase-1-brief`. Carried forward, not closed: checklist item 12 passes but rests on the human's
+own diagnosis that the incumbents' AI is a keyword bot — if `/dsf:research` finds otherwise, the
+brief's problem statement moves and phase 1 reopens through `/dsf:change`.

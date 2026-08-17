@@ -60,22 +60,31 @@ file before touching any tool. Only `/dsf:init` changes a row.
 - **Browser & screenshots — Playwright MCP.** Project-scoped in `.mcp.json` as `playwright`
   (`@playwright/mcp` 0.0.79). Screens are rendered and screenshotted, never described.
   Only loads for a session rooted at this repo.
-- **Icons — Solar**, served as SVG through the Icons8 MCP and downloaded into the repo. The
-  single style (`linear` / `bold` / `bold-duotone`) is **not yet chosen** — it is locked at
-  `/dsf:concept` and written to `DESIGN.md` at `/dsf:build`. No phase ships an icon before then.
+- **Design quality laws — `impeccable` 4.1.1**, project scope. Every critique / audit / document /
+  extract pass in phases 4–10 runs the `impeccable` command for that pass, not the file in
+  `.design/prompts/`. The artifact still names the pass and which tool ran it.
+- **Structured brief — `superpowers` 6.3.0**, project scope. `/dsf:brief` runs the `brainstorming`
+  skill. The gate discipline is unchanged: never synthesise a brief from one answer, unanswered
+  stays `[?]`.
+- **Icons — Solar**, downloaded into the repo as SVG from the open set — no account, and **no
+  Icons8 MCP is connected**, so nothing may plan around one. The single style (`linear` / `bold` /
+  `bold-duotone`) is **not yet chosen** — it is locked at `/dsf:concept` and written to `DESIGN.md`
+  at `/dsf:build`. No phase ships an icon before then.
+- **Hosting — GitHub + Pages.** Repo `johnvijaysolomon/wati`, `origin/main`, Pages on `main` root:
+  **<https://johnvijaysolomon.github.io/wati/>**. Every phase pushes and reports its artifact's
+  public URL. **The repo is public** — research, screenshots, personas and quotes are all
+  world-readable, so nothing that must stay private goes in this repo.
 
 **Fallback in force**
 
 - **Visual references — no Refero.** Use the Mobbin MCP first, web search second; every row of
   `concept/references.md` is tagged `[mobbin]` or `[web]` with the app and screen named.
-- **Design quality laws — no `impeccable`.** Every critique / audit / document / extract pass
-  runs the matching file in `.design/prompts/`, and the artifact names which prompt was run.
-- **Structured brief — no `superpowers`.** Phase 1 *is*
-  `.design/prompts/brief-interrogation.md`, run question by question. Unanswered stays `[?]`.
 - **Imagery — no Gemini key.** Higgsfield MCP `generate_image`, one locked colorway, every
   prompt recorded verbatim in `visuals/README.md` with its asset id.
-- **Hosting — no GitHub.** Commits stay local, nothing is pushed, no phase reports a public URL.
-  Pages open from the local path or a local static server started on request.
+
+**Session caveat.** `impeccable` and `superpowers` were installed on 2026-08-17 and load from the
+**next** session start. A command that needs one must confirm it is actually available and use the
+`.design/prompts/` fallback for that session if it is not — saying so in the artifact.
 
 ---
 

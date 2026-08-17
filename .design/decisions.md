@@ -58,3 +58,50 @@ the repo renders it yet. Colour is phase 5–6 work (constitution rule 13), so t
 a hard lock or a starting point, and `/dsf:build` (phase 6) derives the ramp and the semantic
 colour roles from whatever that answer is. Same green as the existing HDS 2.0 system, so a
 divergence here is a decision, not an accident.
+
+## 2026-08-17 · gate
+
+**Decided:** re-run of `/dsf:init` — "impeccable skill, obra/superpowers" installed, "Keep Solar"
+for icons, "GitHub + Pages" for hosting, repo `wati` "private". Reverses the 08:18 answer that
+left `impeccable`, `superpowers` and hosting on fallback; the reversal is on new evidence, not a
+change of mind — Homebrew is on this machine, so the "no `gh`" blocker recorded at 08:21 was never
+real.
+**Contradicts:** `.design/decisions.md` 08:18 gate — "leave `impeccable` and `superpowers` on
+fallback, local hosting". Superseded deliberately at a re-run of the same gate, which is the one
+sanctioned place to change a toolbox row.
+**Option:** (1) update the spec — `toolbox.md` is the spec for tools, and it was rewritten.
+**Propagated:** `.design/memory/toolbox.md` (3 rows fallback→active, Rules and Notes rewritten),
+`CLAUDE.md` (Toolbox section), `README.md` (Pages URL, public-repo warning), `index.html`
+(`context.toolbox`), `.design/progress/phase-0.md`.
+
+## 2026-08-17 · gate
+
+**Decided:** "Make it public, enable Pages" — after `POST /repos/johnvijaysolomon/wati/pages`
+failed with HTTP 422, *"Your current plan does not support GitHub Pages for this repository"*.
+Pages on a private repo needs a paid plan; this account is free. The repo had been created private
+as asked, so the failure was reported and the choice handed back rather than the visibility being
+flipped silently.
+**Contradicts:** the answer given minutes earlier in the same gate — repo `wati`, **private**.
+**Option:** (1) update the spec — visibility changed to public, `gh repo edit --visibility public`.
+**Propagated:** repo visibility, Pages enabled on `main` root
+(<https://johnvijaysolomon.github.io/wati/>), `.design/memory/toolbox.md` (Hosting note records
+both the 422 and why the repo is public), `CLAUDE.md` and `README.md` (world-readable warning, so
+later phases cannot commit private material by accident).
+
+## 2026-08-17 · correction
+
+**Decided:** two factual errors from the 08:12–08:38 run were corrected during the re-run, neither
+of them a taste decision, so neither was gated.
+**Contradicts:** (a) `toolbox.md` Notes, 08:21 — "the Icons8 MCP is connected (`search_icons`,
+`get_icon_svg`) and serves the SVGs". No Icons8 MCP exists in this session or at account level
+(`ToolSearch "+icons8"` → nothing). Solar is an open set needing no account, so the row stays
+`active` on the strength of the *choice*; only the delivery claim was wrong. (b) `index.html`
+lines 47 and 78 — `{{PRODUCT_NAME}}` had been substituted in the markup per `init.md` step 6,
+which breaks phase-0 checklist item 8 ("nothing outside that data block was edited"). This was the
+blocker `init.7` reported at 08:34 and could not resolve.
+**Option:** n/a — restoring a false record and a shipped file, per `init.md`'s own recovery prompt.
+**Propagated:** `toolbox.md` Icons note rewritten; `index.html` markup restored to
+`{{PRODUCT_NAME}}` in `<title>` and `[data-product]`. Evidence the substitution was never needed:
+`assets/pipeline.js:618-622` sets both from the JSON (`ctx.product || data.product`), and line 619
+explicitly handles the un-substituted `{{` placeholder. **The template defect stands** — `init.md`
+step 6 orders an edit checklist item 8 forbids — and is worth reporting upstream.

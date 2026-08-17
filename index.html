@@ -44,7 +44,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wati: design pipeline</title>
+<title>{{PRODUCT_NAME}}: design pipeline</title>
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/pipeline.css">
 </head>
@@ -75,7 +75,7 @@
   <div class="brand-row">
     <div class="brand">
       <span class="kicker" data-i18n="nav.1">design pipeline</span>
-      <span class="product" data-product>Wati</span>
+      <span class="product" data-product>{{PRODUCT_NAME}}</span>
     </div>
     <!-- Outside every [data-i18n] node on purpose: applyLocale rewrites those
          wholesale, and this control has to survive a language switch. -->
@@ -3153,11 +3153,11 @@
     "toolbox": [
       { "tool": "Browser & screenshots", "status": "active" },
       { "tool": "Visual references", "status": "fallback" },
-      { "tool": "Design quality laws", "status": "fallback" },
-      { "tool": "Structured brief", "status": "fallback" },
+      { "tool": "Design quality laws", "status": "active" },
+      { "tool": "Structured brief", "status": "active" },
       { "tool": "Imagery", "status": "fallback" },
       { "tool": "Icons", "status": "active" },
-      { "tool": "Hosting", "status": "fallback" }
+      { "tool": "Hosting", "status": "active" }
     ]
   },
   "phases": [
@@ -3239,7 +3239,8 @@
       "artifacts": [
         { "path": "wireframes/_screens.md", "label": "Which states are real for which screen", "exists": false, "link": false },
         { "path": "wireframes/_conventions.md", "label": "The rules every screen is built to", "exists": false, "link": false },
-        { "path": "wireframes/index.html", "label": "Your screen navigator: start clicking here", "exists": false, "link": true },
+        { "path": "wireframes/wireframes.css", "label": "The one stylesheet every screen shares", "exists": false, "link": false },
+      { "path": "wireframes/index.html", "label": "Your screen navigator: start clicking here", "exists": false, "link": true },
         { "path": "wireframes/_critique.md", "label": "What was wrong and what was fixed", "exists": false, "link": false }
       ]
     },
@@ -3276,7 +3277,8 @@
       "artifacts": [
         { "path": "DESIGN.md", "label": "The visual language, documented from the screens", "exists": false, "link": false },
         { "path": "ui/inventory.md", "label": "Every component and where it appears", "exists": false, "link": false },
-        { "path": "design-system/tokens.css", "label": "The shared values: colour roles and geometry", "exists": false, "link": false },
+        { "path": "ui/tokens-audit.md", "label": "Every hard-coded value found, and the token it became", "exists": false, "link": false },
+      { "path": "design-system/tokens.css", "label": "The shared values: colour roles and geometry", "exists": false, "link": false },
         { "path": "design-system/components/", "label": "One file per component", "exists": false, "link": false },
         { "path": "ui/shell.html", "label": "The shared header and tab bar", "exists": false, "link": true },
         { "path": "ui/kit.html", "label": "Your kit showcase: review it here", "exists": false, "link": true },
@@ -3351,7 +3353,8 @@
         { "path": "handoff/spec/", "label": "How each flow behaves, state by state", "exists": false, "link": false },
         { "path": "handoff/map.md", "label": "Change this value, and here is what moves", "exists": false, "link": false },
         { "path": "handoff/a11y.md", "label": "Accessibility, where it lives and how to check it", "exists": false, "link": false },
-        { "path": "handoff/index.html", "label": "Your handoff page: the route for a newcomer", "exists": false, "link": true },
+        { "path": "handoff/README.md", "label": "The route in: what to read, in what order", "exists": false, "link": false },
+      { "path": "handoff/index.html", "label": "Your handoff page: the route for a newcomer", "exists": false, "link": true },
         { "path": "design-system/examples/one-shot/index.html", "label": "The graduation one-shot", "exists": false, "link": true }
       ]
     }

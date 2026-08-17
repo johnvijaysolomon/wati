@@ -29,3 +29,6 @@ yarn-error.log*
 # Local environment
 .env
 .env.local
+
+# Agent verification scratch
+.playwright-mcp/

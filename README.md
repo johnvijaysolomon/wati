@@ -13,15 +13,18 @@ driven by `/dsf:*` commands in Claude Code.
 
 ## Start here
 
-**Project home page:** [`index.html`](index.html) — open it in a browser
-(`/Users/johnvijaysolomon/wati/index.html`).
+**Project home page: <https://johnvijaysolomon.github.io/wati/>** — published from `main` by
+GitHub Pages. It also opens straight from the local file, [`index.html`](index.html)
+(`/Users/johnvijaysolomon/wati/index.html`), with no server needed.
 
 It is the state view of the pipeline: which phase the project is in, every artifact produced so
 far, the criteria each phase is verified against, and the prompt to send next. Status is derived
 from the files on disk, the `/dsf:check` verdicts and the git tags — never declared.
 
-Hosting is local-only for this project (no GitHub remote); ask the agent to start a local static
-server if you would rather view the pages over `http://`.
+> **This repo is public.** Pages on a private repo needs a paid GitHub plan, so the repo was made
+> public at the phase-0 gate to publish the pipeline. Everything committed here — research,
+> screenshots, personas, quotes — is world-readable. Anything that must stay private does not
+> belong in this repo.
 
 ## The route
 

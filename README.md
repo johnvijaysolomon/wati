@@ -2,7 +2,7 @@
 
 An agentic customer engagement platform. The AI resolves the conversation; the product is where
 you build, watch and correct it — designed around the Administrator switching off a WhatsApp BSP
-whose "AI" never deflected anything.
+they could neither verify nor escape.
 
 This repo **is** the design file. Research, structure, screens, copy, visual language, the
 design system and the handoff all live here as files. No Figma required.
@@ -29,9 +29,10 @@ humans are the exception path, and the product's job is to make that AI good.
 
 It is built for the **Administrator** of a business already running a WhatsApp BSP — Wati,
 AiSensy, Interakt, Gupshup. They arrive mid-category with templates, contacts and a connected
-number already in hand. They switch because the AI they have is fake: a keyword bot behind a
-flow builder that deflects nothing, so humans still answer everything and the cost curve never
-bends.
+number already in hand. Their current tool does have an AI — sold as an upsell on a keyword-flow
+core — but that is not why they leave. They leave because support did not answer, billing trapped
+them and the product did not work. They are not buying better answers; they are buying a vendor
+they can verify and exit.
 
 Ten roles exist in the product; **Administrator and Operator get designed views** and the other
 eight are permission-gated. Five channels are in scope — WhatsApp, web chat, Instagram and

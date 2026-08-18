@@ -1,3 +1,5 @@
+Reopened 2026-08-18 · by /dsf:change · the Problem statement in `CLAUDE.md` was rewritten after phase-2 evidence overturned it; items 2, 3 and 12 quote text that has changed.
+
 # Phase 1 — Brief · check results
 
 Checked: 2026-08-17 (re-check, replacing the 12/13 verdict of the same day) · Checklist:

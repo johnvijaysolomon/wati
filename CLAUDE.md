@@ -22,10 +22,10 @@ exist (Administrator, Campaign Manager, Template Manager, Operator, Developer, C
 Dashboard Viewer, Automation Manager, Billing Manager, Trial); **Administrator and Operator get
 designed views**, the other eight are permission-gated.
 
-**Problem.** The AI in the tool they have is fake — a keyword bot behind a flow builder that
-deflects nothing real, so humans still answer everything and the cost curve never bends. It is
-the business's problem before the user's: with nothing built they pay per conversation *and* per
-head.
+**Problem.** The tool they have does have an AI, sold as an upsell on a keyword-flow core, but
+that is not why they leave — they leave because support did not answer, billing trapped them and
+the product did not work. They are not buying better answers; they are buying a vendor they can
+verify and exit.
 
 **Platform.** **Desktop web, primary**; tablet and mobile adapt down. This **inverts phase 8** —
 phase 4 designs at desktop width, phase 8 contracts — and the inversion is deliberate.
@@ -50,11 +50,17 @@ cost, measured post-migration.
 **It is not.** *Another WhatsApp API SaaS* (the human's line). Not a chatbot builder. Not
 shared-inbox-first.
 
+**Corrections.** 2026-08-18 · `/dsf:change` · partial scope. The Problem above replaces the
+phase-1 line *"the AI in the tool they have is fake — a keyword bot behind a flow builder"*,
+overturned by two phase-2 findings: the AI exists and is an upsell on a keyword-flow core
+(`research/research.md` → COMPETITORS difference 1), and nobody in the corpus left over bad AI
+answers (→ Re-research Pass 2 Q3). Full entry and the recorded debt: `.design/decisions.md`.
+
 **Open `[?]`** — `[?]` the 30% measurement window: "post-migration" carries no period;
 hypothesis **90 days**, confirmed by the human or a phase-2 category benchmark. `[?]` which
-surfaces the eight non-designed roles reach — phase-3 work, confirmed by `ia/sitemap.md`. `[?]`
-what "the AI is fake" means concretely in the competitors: the human's diagnosis, not yet a
-sourced finding — confirmed by phase 2 collecting competitor AI capability first-hand (rule 3).
+surfaces the eight non-designed roles reach — phase-3 work, confirmed by `ia/sitemap.md`.
+~~`[?]` what "the AI is fake" means concretely in the competitors~~ — **closed by phase 2**, and
+the answer rewrote the Problem above rather than confirming it.
 
 ---
 
@@ -184,8 +190,8 @@ Done, 2026-08-17 — full text in the **Brief** section at the top of this file;
 the inbox is an exception surface, not the workspace · **desktop web is primary**, so phase 8
 contracts instead of expanding · **five channels** as connect/configure/monitor/govern, not five
 inboxes · success is **10 min of in-product time to live** and **−30% cost per resolved
-conversation**. Three `[?]` are open and listed in the Brief section; phase 2 should close the
-third one. Two implications the Brief block states only by naming them: `Trial` is one of the ten
+conversation**. Two `[?]` remain open and are listed in the Brief section; the third was
+closed by phase 2 and overturned the Problem statement — see **Corrections** there. Two implications the Brief block states only by naming them: `Trial` is one of the ten
 roles, so the trial state is a designed experience rather than an afterthought (phase 3 owns
 where it sits); and the phase-8 inversion means phase 4 designs at desktop width, so a later
 phase reading "mobile-first" anywhere should treat it as a defect, not an instruction.

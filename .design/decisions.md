@@ -290,3 +290,45 @@ git tag `phase-2-discover`. Four further items are carried forward in the verdic
 *Carried forward* section: two dangerous `[?]` holding scope decisions, email and SMS unevidenced
 as inbound channels, and Meta's 2026-01-15 AI-Provider policy as a constraint the brief records as
 absent.
+
+## 2026-08-18 · change-request
+
+**Decided:** "carry on" at the rule-12 guard, then **"partial"** at the scope gate. The guard's
+option (1) *update the spec* was taken — read from "carry on" and stated back before any file was
+touched, with the scope gate immediately after as the real protection. **The change:** the brief's
+Problem statement is rewritten from *"The AI in the tool they have is fake — a keyword bot behind a
+flow builder that deflects nothing real…"* to *"The tool they have does have an AI, sold as an
+upsell on a keyword-flow core, but that is not why they leave — they leave because support did not
+answer, billing trapped them and the product did not work. They are not buying better answers;
+they are buying a vendor they can verify and exit."*
+**Contradicts:** `CLAUDE.md:25` (the line quoted above) and its duplicate at `README.md:32`. That
+decision's recorded source is the human's own answer at the phase-1 problem gate — they picked
+"The AI is fake" from four options. **It was recorded as provisional against exactly this test:**
+`.design/decisions.md`, phase-1 sign-off entry — *"checklist item 12 passes but rests on the
+human's own diagnosis that the incumbents' AI is a keyword bot — if `/dsf:research` finds
+otherwise, the brief's problem statement moves and phase 1 reopens through `/dsf:change`."*
+Research found otherwise, twice: COMPETITORS difference 1 (AiSensy ₹2,500 builder vs ₹3,500 AI
+Agent Builder; Interakt AI Agents a ₹3,000/mo add-on) and Re-research Pass 2 Q3 (a search
+specifically for people who left over bad AI answers returned none).
+**Option:** **(1) update the spec**, at **partial** scope.
+**Propagated:** `CLAUDE.md` — Problem rewritten, the third `[?]` struck through as closed by phase
+2, a **Corrections** line added recording the old wording and its two overturning findings, and
+the **Brief** context block corrected from "three `[?]` open" to two. `README.md` — the
+front-page pitch (`:5`) and the Brief section (`:32-34`). Phase 1 reopened: `status` →
+`in-progress` in `index.html` with `tagged`, `criteria` and `steps.done` deliberately intact;
+`Reopened` line prepended to `.design/checklists/results/phase-1.md`; reopen line appended to
+`.design/progress/phase-1.md`.
+**Recorded debt** — `design-system/backlog.md`, created early for this purpose: four phase-2
+references still describe this change as pending (`people/personas.md:44`,
+`people/personas.html:325`, `research/research.md:469`,
+`.design/checklists/results/phase-2.md:52`). Each is accurate as history; editing them would
+reopen phase 2 and cost a re-check of 25 items, which the human declined at the scope gate.
+Closed by the next `/dsf:change` that reopens phase 2 for another reason, or by a `/dsf:users`
+re-run. **Do not reopen phase 2 solely for this.**
+**Deliberately out of scope,** named at the restatement and unchanged here: the success criteria
+(the −30% persona-scoping problem is its own change), the five channels (email and SMS are
+unevidenced as inbound channels for the primary persona — recorded in the phase-2 verdict, needs
+its own `/dsf:change`), platform, brand, the ten roles and the anti-goals.
+**Known risk introduced:** the Brief section grew 50 → 56 lines, so phase-1 checklist item 13
+("the brief fits on one screen") is now borderline where it was comfortable. Flagged rather than
+pre-judged; `/dsf:check 1` decides.

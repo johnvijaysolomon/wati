@@ -50,15 +50,15 @@ cost, measured post-migration.
 **It is not.** *Another WhatsApp API SaaS* (the human's line). Not a chatbot builder. Not
 shared-inbox-first.
 
-**Corrections.** 2026-08-18 · `/dsf:change` · partial scope. The Problem above replaces the
-phase-1 line *"the AI in the tool they have is fake — a keyword bot behind a flow builder"*,
-overturned by two phase-2 findings: the AI exists and is an upsell on a keyword-flow core
-(`research/research.md` → COMPETITORS difference 1), and nobody in the corpus left over bad AI
-answers (→ Re-research Pass 2 Q3). Full entry and the recorded debt: `.design/decisions.md`.
+**Corrections.** 2026-08-18 · `/dsf:change` — the Problem above replaces the phase-1 line
+*"the AI in the tool they have is fake — a keyword bot behind a flow builder"*, overturned by
+phase-2 evidence. Full record, sources and recorded debt: `.design/decisions.md`.
 
 **Open `[?]`** — `[?]` the 30% measurement window: "post-migration" carries no period;
 hypothesis **90 days**, confirmed by the human or a phase-2 category benchmark. `[?]` which
-surfaces the eight non-designed roles reach — phase-3 work, confirmed by `ia/sitemap.md`.
+surfaces the eight non-designed roles reach — hypothesis: each gets a permission-filtered view of
+the Administrator's surfaces rather than a destination of its own, except `Billing Manager` and
+`Trial`, which probably need one. Phase-3 work, confirmed by `ia/sitemap.md`.
 ~~`[?]` what "the AI is fake" means concretely in the competitors~~ — **closed by phase 2**, and
 the answer rewrote the Problem above rather than confirming it.
 

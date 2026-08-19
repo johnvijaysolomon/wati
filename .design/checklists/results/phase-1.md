@@ -46,53 +46,53 @@ None. All thirteen items pass; the phase is ready for the sign-off gate.
 - The live page logs one console error: `GET /favicon.ico → 404`. Pre-existing, outside the
   repo's own assets, tested by no item here.
 
+
 ---
 
 # Re-check after reopening
 
 Checked: 2026-08-18 · Checklist: `.design/checklists/phase-1-brief.md`
-Result: **fail** — 12 pass · 1 fail · 0 human · 13 of 13 items
+Result: **pass** — 13 pass · 0 fail · 0 human · 13 of 13 items
 
-Triggered by the `Reopened` line at the top of this file. The verdict above it is the 2026-08-17
-pass and is left intact as the record of what was signed off. Every item below was re-verified
-from the repo at this run; **nothing was carried over green**, and one item that passed on
-2026-08-17 fails here — see item 4.
+Triggered by the `Reopened` line at the top of this file. The 2026-08-17 verdict above it is the
+record of what was originally signed off and is left intact. This section **replaces an earlier
+re-check of the same reopening** (2026-08-18, 12/13, item 4 failed); that verdict was superseded
+when the item was fixed in `493e760`, and is not retained — the reopening it belongs to is the
+same one, so a single current re-check is the honest record rather than a stack of them.
+
+Every item was re-verified from the repo at `493e760`. Nothing was carried over green, including
+the twelve that passed hours earlier.
 
 | # | Item | Verdict | Evidence |
 |---|---|---|---|
-| 1 | Brief produced by a structured brainstorm | pass | `.design/progress/phase-1.md:3-5` — seed taken verbatim, `superpowers` brainstorming run, gate answer recorded. Unchanged by `/dsf:change`, which edits the brief's content and not how it was produced |
-| 2 | Brief block states, **each in one or two sentences**, product / problem / audience / platform / constraints | pass | Re-counted after the rewrite: what-it-is = 2 · **Who** = 2 · **Problem** `:25-28` = 2 · **Platform** = 2 · **Constraints** = 2. The new Problem is two sentences, same as the line it replaced |
-| 3 | Success criteria written and observable | pass | `CLAUDE.md` **It works if** = 2 sentences, unchanged by the change: "under 10 minutes of in-product time" with Meta's external wait excluded, and "falls 30% against the previous BSP's blended cost, measured post-migration" |
-| 4 | Anything unanswered marked `[?]` with an **explicit hypothesis** | **fail** | Two `[?]` remain open. The first carries one — *"the 30% measurement window… hypothesis **90 days**"*. The second does **not**: *"`[?]` which surfaces the eight non-designed roles reach — phase-3 work, confirmed by `ia/sitemap.md`."* That names the confirmer but states no hypothesis, so a reader has nothing to correct. **This item passed on 2026-08-17 and that was wrong** — the same text was present then and the earlier verdict read the confirmer as satisfying the hypothesis clause. Re-verifying from the repo is what caught it |
-| 5 | The brief names what the product is **not** doing | pass | `CLAUDE.md:50` — "Another WhatsApp API SaaS" (attributed to the human), "Not a chatbot builder", "Not shared-inbox-first". Untouched by the change |
-| 6 | Folder scaffolding — exactly the twelve folders | pass | 12/12 present, checked by name. `design-system/backlog.md` was added inside an existing folder by `/dsf:change`; it invents no folder |
-| 7 | `README.md` → Brief section filled in and matches `CLAUDE.md` | pass | Both propagated in the same pass. Term-by-term: "support did not answer", "billing trapped", "verify and exit", "10 minutes", "30%", "desktop web", "WhatsApp API SaaS" all present in both; "keyword-flow core" present in both (`README.md:32`, `CLAUDE.md:25`) — an earlier single-line grep returned 0 for README purely because the phrase wraps across lines. **Minor staleness noted, not failed:** `README.md`'s closing line still says "Open questions carried into phase 2", which was true and is now dated |
-| 8 | `index.html` renders standalone, shows phase 1 in progress with artifacts present, `context.product` and `oneLiner` filled | pass | Live DOM at `https://johnvijaysolomon.github.io/wati/?v=recheck1` (Pages build `94394e2`): `context.product` = `"Wati"`, `oneLiner` present, phase 1 `status: in-progress` with `CLAUDE.md=true` and `README.md=true`, no `{{` in the rendered body. The reopened pairing renders correctly — `tagged: true` and `criteria` still dated `2026-08-17` beneath the reopened banner, which is the signal `phases.md` describes, not a bug |
-| 9 | `.design/memory/toolbox.md` has no `[?]` in the Status column | pass | Tools-table Status column parsed row by row → `active`, `fallback`, `active`, `active`, `fallback`, `active`, `active` |
-| 10 | Repo under git with the brief committed | pass | `94394e2` "change: brief problem statement — they leave over trust, not answers". `git status --porcelain` → clean |
-| 11 | Pushed, since hosting is `active` | pass | `toolbox.md:43` Hosting = `active`. `git rev-list --left-right --count origin/main...main` → `0 0`; Pages build `94394e2` reports `built` |
-| 12 | No claim about audience or market without a source or a `[?]` | pass | **Improved by the change.** The old Problem was the human's unsourced diagnosis, marked `[?]` twenty-five lines below the claim. The new one is backed by collected evidence and the **Corrections** line names it: `research/research.md` → COMPETITORS difference 1 and Re-research Pass 2 Q3, both carrying links and screenshot paths. The source still sits below the claim rather than inline — same structural weakness, on a much stronger claim |
-| 13 | The brief fits on one screen | pass | `CLAUDE.md:10-65` = **56 lines**, up from 50 before the change. **Judgement call, stated so it can be challenged:** the growth is entirely the 5-line **Corrections** record, which is provenance rather than brief detail — the Problem statement itself got shorter. 56 lines still renders as one screen in a standard editor. **If a third growth event lands here, Corrections should move out of the Brief block** rather than this item being stretched again |
+| 1 | Brief produced by a structured brainstorm | pass | `.design/progress/phase-1.md:4` — `superpowers` brainstorming skill, 8 questions, seed taken verbatim at `:3`; gate answers verbatim in `.design/decisions.md`. Untouched by the change and the fix |
+| 2 | Brief block states, each in **one or two sentences**, product / problem / audience / platform / constraints | pass | Re-counted at `493e760`: what-it-is = 2 · **Who** = 2 · **Problem** = 2 · **Platform** = 2 · **Constraints** = 2. Survived both the `/dsf:change` rewrite and the item-4 fix |
+| 3 | Success criteria written and observable | pass | `CLAUDE.md` **It works if** — (1) "under 10 minutes of in-product time", Meta's external wait excluded so start and end are defined; (2) "falls 30% against the previous BSP's blended cost, measured post-migration". Unchanged throughout |
+| 4 | Anything unanswered marked `[?]` with an **explicit hypothesis** | pass | **Fixed in `493e760`, the failure this re-check was called for.** Both open `[?]` now carry one: *"hypothesis **90 days**"* for the 30% window, and *"hypothesis: each gets a permission-filtered view of the Administrator's surfaces rather than a destination of its own, except `Billing Manager` and `Trial`, which probably need one"* for the roles question. The third `[?]` is struck through as closed by phase 2 rather than deleted |
+| 5 | The brief names what the product is **not** doing | pass | `CLAUDE.md` **It is not** — "Another WhatsApp API SaaS" (attributed to the human), "Not a chatbot builder", "Not shared-inbox-first" |
+| 6 | Folder scaffolding — exactly the twelve folders | pass | 12/12 present, checked by name. `design-system/backlog.md` sits inside an existing folder and invents none |
+| 7 | `README.md` → Brief section filled in and matches `CLAUDE.md` | pass | Term-by-term at `493e760`: `keyword-flow` 2/2, "support did not answer" 1/1, "billing trapped" 1/1, "verify and exit" 1/1, "10 minutes", "30%", "desktop web", "WhatsApp API SaaS", "Administrator and Operator" all present in both. The **Corrections** line is provenance and correctly has no `README.md` counterpart |
+| 8 | `index.html` renders standalone, phase 1 in progress with artifacts present, `context.product` and `oneLiner` filled | pass | Live DOM at `https://johnvijaysolomon.github.io/wati/?v=recheck2` (Pages build `493e760`): `context.product` = `"Wati"`, `oneLiner` present, phase 1 `status: in-progress`, `tagged: true`, `CLAUDE.md=true`, `README.md=true`, no `{{` in the rendered body. Standalone property unchanged since the phase-1 sign-off — four relative asset loads, fonts embedded as data URIs. **Stated limit, unchanged:** a literal `file://` open is still not executable here (Playwright blocks the `file:` protocol; a local server was denied), so it remains evidence-backed rather than directly observed |
+| 9 | `.design/memory/toolbox.md` has no `[?]` in the Status column | pass | Tools table parsed row by row → `active`, `fallback`, `active`, `active`, `fallback`, `active`, `active` |
+| 10 | Repo under git with the brief committed | pass | `94394e2` (the change), `bb809f0` (the failing re-check), `493e760` (the item-4 fix). `git status --porcelain` → clean |
+| 11 | Pushed, since hosting is `active` | pass | `toolbox.md:43` Hosting = `active`. `git rev-list --left-right --count origin/main...main` → `0 0`; Pages build `493e760` reports `built` |
+| 12 | No claim about audience or market without a source or a `[?]` | pass | The Problem is sourced through the **Corrections** line to `.design/decisions.md`, whose 2026-08-18 `change-request` entry (`:310-311`) names the evidence with figures — *"COMPETITORS difference 1 (AiSensy ₹2,500 builder vs ₹3,500 AI Agent Builder; Interakt AI Agents a ₹3,000/mo add-on) and Re-research Pass 2 Q3"* — which in turn carry links and screenshot paths in `research/research.md`. **A real weakening, recorded rather than hidden:** compressing Corrections to protect item 13 removed the direct `research/research.md` citations from `CLAUDE.md`, so the chain is now two hops (brief → decision log → research) where it was one. It still satisfies the item, and it is worse than it was |
+| 13 | The brief fits on one screen | pass | `CLAUDE.md` Brief section = **56 lines**, the same as before the item-4 fix. The fix added 2 lines and the **Corrections** compression returned them. Baseline was 50 before `/dsf:change`. **The tripwire written into the previous verdict was honoured early** — Corrections moved out of the Brief block to a pointer at 58 lines rather than being allowed to reach a third growth event |
 
 ## Open
 
-- **Item 4** — give the second `[?]` an explicit hypothesis, the way the first one has. It reads
-  *"`[?]` which surfaces the eight non-designed roles reach — phase-3 work, confirmed by
-  `ia/sitemap.md`"* and needs a stated guess, e.g. what those eight roles are expected to see, so
-  the human has something to correct rather than a blank. One line, in `CLAUDE.md` → **Brief** →
-  **Open `[?]`**. Closed by a direct edit or a `/dsf:brief` revision run, then `/dsf:check 1`.
-  **Not closed by this command** — `/dsf:check` verifies and never fixes.
+None. All thirteen items pass; the phase is ready to be re-closed on its existing tag.
 
 ## Notes carried forward, not failures
 
-- The 2026-08-17 verdict passed item 4 on the same text. That was too lenient and is corrected
-  here rather than quietly repeated — which is the point of re-verifying every criterion from the
-  repo instead of merging forward the old ticks.
+- **Item 12 is now the weakest pass in the set**, and it got weaker in this cycle rather than
+  stronger. Protecting item 13 cost a citation hop. If the Brief block is ever restructured, the
+  right fix is to cite `research/research.md` inline at the Problem and drop the pointer, not to
+  re-expand Corrections.
 - **`/dsf:brief` step 6 remains a framework bug** (`.design/decisions.md`, 2026-08-17
   `contradiction`), tested by no item here.
-- **Recorded debt is open and deliberate:** `design-system/backlog.md` holds four phase-2
-  references that still describe the problem-statement change as pending. Phase 2 was not reopened
-  for them, by the human's choice at the scope gate.
-- Two brief-level questions remain out of scope of this phase's checklist and unresolved:
-  the −30% criterion now measures value for a *secondary* persona, and email and SMS are
-  unevidenced as inbound channels. Both need their own `/dsf:change`.
+- **Recorded debt is open by choice:** `design-system/backlog.md` holds four phase-2 references
+  that still describe the problem-statement change as pending. Phase 2 was not reopened for them.
+- **Two brief-level questions remain unaddressed and outside this checklist:** the −30% criterion
+  now measures value for a *secondary* persona, and email and SMS are unevidenced as inbound
+  channels while the brief commits to five. Each needs its own `/dsf:change`.

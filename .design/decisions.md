@@ -332,3 +332,27 @@ its own `/dsf:change`), platform, brand, the ten roles and the anti-goals.
 **Known risk introduced:** the Brief section grew 50 → 56 lines, so phase-1 checklist item 13
 ("the brief fits on one screen") is now borderline where it was comfortable. Flagged rather than
 pre-judged; `/dsf:check 1` decides.
+
+## 2026-08-18 · gate
+
+**Decided:** "channels should contain instagram, messenger, tiktok, email, sms etc.. a settings
+page of sorts", then **"withdraw tiktok"** — the phase-3 sitemap gate, answered in two parts.
+**Applied:** `Channels` becomes a **settings surface** listing every channel as a row with its
+connection and approval state, and `Channel detail` is **one screen parameterised by channel
+type, not one screen per channel** — six near-identical screens would multiply the wireframes,
+copy and states for a difference that lives entirely in the connection mechanics. Per-channel
+divergence becomes states of that one screen at phase 4. Messenger needed no decision: the brief
+already covers it as "Facebook DM".
+**Contradicts:** TikTok contradicted `CLAUDE.md` → Brief → Scope, quoted: *"**Channels:**
+WhatsApp, web chat widget, Instagram + Facebook DM, email, SMS — all five…"*, which is the human's
+own answer at the phase-1 channels gate. The rest of the request contradicted nothing.
+**Option:** **(3) withdraw**, for TikTok only. The recommendation offered was withdraw, on the
+grounds that the brief already carries email and SMS unevidenced and TikTok would have made three
+of six channels rest on faith.
+**Propagated:** `ia/sitemap.md` (Channels restructured, TikTok absent from the tree and the
+matrix), `design-system/backlog.md` (TikTok entry with the two things that would let it in, and
+the instruction to fold it into the outstanding email/SMS change rather than take it separately).
+The rest of the tree — `Overview` landing rather than an inbox, no per-conversation queue for P1,
+replay inline rather than a destination, `Account` as a first-class branch with `Export` a peer of
+`Billing`, and `People and access` left visible as an `[ORPHAN]` — was presented at the same gate
+and drew no objection; it is treated as confirmed.

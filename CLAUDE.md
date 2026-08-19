@@ -248,7 +248,30 @@ persona — WhatsApp confirmed, Instagram supported, the other two carried on th
 
 ### Structure
 <!-- phase 3 · main flow · navigation model and tap depth to the main job · paths to ia/ -->
-`[?]`
+Done 2026-08-19 — `ia/sitemap.md`, `ia/flows.md`, `ia/ia.html`. **19 screens, every one carrying
+the job it serves.**
+**Navigation — 5 global items:** `Overview` (Main, R3) · `Themes` (R2) · `Answers` (Main, R1, E2) ·
+`Channels — settings` (R1) · `Account` (R5, R3). A sixth, `Inbox`, is **gated on the Operator
+permission** — the first concrete use of the brief's permission model. `Setup — first run` is
+deliberately *not* in the nav; it replaces the shell until it completes.
+**Tap depth (budget ≤3):** Main 0 — but that is the landing screen and the main job is closed by
+the AI working, not by a screen, so **the counts later phases are held to are the MVP-core ones:
+R1 = 3 (at the limit), R2 = 1–2, R5 = 2, R3 = 2, E2 = 2.** R1 is the pressure point: a fourth step
+breaches this budget and the brief's 10-minute criterion together.
+**Main flow:** customer messages → knowledge covers it? → guardrail forbids it? → send → customer
+satisfied or goes quiet → resolution recorded → `Overview`. Handover fires when knowledge is thin
+or a guardrail blocks; if nobody holds the Operator role a **fallback reply** fires and `Overview`
+raises an unattended handover. Four flows exist: Main, R1, R2, R5.
+**Structural decisions later phases must not undo:** `Overview` lands, not an inbox · **no
+per-conversation queue for the primary persona** — `Conversation` lives inside a theme, as
+evidence · **replay is inline, never a destination** (the persona's setup budget is under 30
+minutes) · `Account` is a first-class branch with `Export` a peer of `Billing`, because a buried
+exit is the defect this product argues against · `Channel detail` is **one screen parameterised by
+channel type**, not one per channel.
+**Open:** 1 orphan screen (`People and access` — the brief requires it, no job produces it) and
+2 orphan jobs (S1, S2 — the two weakest-evidenced jobs; backlog, no invented screens). `[?]` email
+and SMS carried on the brief's authority alone. Phase 4 decides whether `Answers` is a real screen
+or a nav container.
 
 ### Wireframes
 <!-- phase 4 · where the screens live, naming convention, state pages, the navigator panel -->

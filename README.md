@@ -79,7 +79,14 @@ purpose: they are where the evidence ran out.
 ## Structure
 
 <!-- phase 3 · sitemap, navigation, flows -->
-`[?]` → `ia/ia.html`
+Nineteen screens, each derived from a job rather than from a competitor's menu, five global
+navigation items plus a permission-gated Inbox, and four flows with their decisions, states and
+both endings. The coverage matrix leaks in exactly two places — the two social jobs — and those
+are the two weakest-evidenced jobs in the project, which is the matrix working.
+
+→ **[ia/ia.html](./ia/ia.html)** — the screen tree with the job beside every screen, all four
+flows as diagrams, and the coverage matrix with orphans highlighted · `ia/sitemap.md` ·
+`ia/flows.md`.
 
 ## Wireframes
 

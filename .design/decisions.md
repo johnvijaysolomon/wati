@@ -356,3 +356,22 @@ The rest of the tree — `Overview` landing rather than an inbox, no per-convers
 replay inline rather than a destination, `Account` as a first-class branch with `Export` a peer of
 `Billing`, and `People and access` left visible as an `[ORPHAN]` — was presented at the same gate
 and drew no objection; it is treated as confirmed.
+
+## 2026-08-21 · gate
+
+**Decided:** "sign off" — read as the **phase-1 sign-off gate**, because it was the only one of the
+two open gates that could be taken: phase 3's verdict is a fail (21/22, item 17), and
+`/dsf:check` creates no tag on a failure. Phase 1 re-closes on its 13/13 re-check of 2026-08-18.
+**Contradicts:** `nothing`.
+**Option:** n/a.
+**Propagated:** `index.html` — phase 1 `status` back to `done`. **No tag was created and none was
+moved:** `phase-1-brief` already existed from the 2026-08-17 sign-off and stays exactly where it
+is; the phase is re-closed on the existing tag and history is not rewritten. `criteria` (13/13,
+`checkedAt` 2026-08-18) and `steps.done` (10) were already correct and were left untouched.
+**The cycle this closes, for the record:** signed off 2026-08-17 → reopened 2026-08-18 by
+`/dsf:change` when phase-2 evidence overturned the brief's problem statement → re-checked at 12/13
+with item 4 failing on a missing hypothesis → fixed → re-checked 13/13 → re-closed here. Four
+verdicts, one tag, no history rewritten.
+**Still open and unaffected by this gate:** phase 3 item 17 (the IA page inlines pre-rendered SVG
+instead of running Mermaid live), which needs either a vendored `mermaid.min.js` or an accepted
+exception logged here before phase 3 can close.
